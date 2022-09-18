@@ -133,6 +133,7 @@ body,
 #root,
 .App {
   height: 100vh;
+  width: 100vw;
 }
 
 body {
@@ -142,9 +143,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  flex-direction: column;
-  background-color: #ebebeb;
 }
 
 code {
@@ -156,4 +154,28 @@ code {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+form {
+  line-height: 125%;
+  font-family: "Inter";
+  font-size: 1.125rem;
+}
+
+.weight--slight {
+  font-weight: 500;
 }

@@ -1,0 +1,15 @@
+#personal {
+  padding-inline: 25px;
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+}
+
+input {
+  font-size: inherit;
+}
+
+.duo {
+  /* border: 1px solid black; */
+  width: 45%;
+}
