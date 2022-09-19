@@ -1,6 +1,10 @@
+import "react-phone-number-input/style.css";
+import PhoneInput from "react-phone-number-input";
+
 export default function Personal(props) {
   return (
     <section id="personal">
+      <h3>Personal</h3>
       <form>
         <div className="row between">
           <div className="column duo">
@@ -235,7 +239,7 @@ export default function Personal(props) {
               placeholder="Line 2, if applicable"
               name="addressUSLineTwo"
               onChange={props.handleChange}
-              value={props.data.addressUSLineOne}
+              value={props.data.addressUSLineTwo}
             />
             <div className="row between">
               <div className="column triple-partner">
@@ -323,7 +327,32 @@ export default function Personal(props) {
             </div>
           </div>
         </div>
-        <div className="row"></div>
+        <div className="row">
+          <div className="column">
+            <label className="weight--slight">Phone</label>
+            <PhoneInput
+              type="text"
+              placeholder="Enter phone number"
+              value={props.data.phone}
+              onChange={props.handleChange}
+              name="phone"
+              id="phone"
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <label className="weight--slight">Email</label>
+            <input
+              type="email"
+              placeholder="john.doe@example.com"
+              value={props.data.email}
+              onChange={props.handleChange}
+              name="email"
+              id="email"
+            />
+          </div>
+        </div>
       </form>
     </section>
   );
