@@ -164,6 +164,7 @@ code {
 .row {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .between {
@@ -174,6 +175,9 @@ form {
   line-height: 125%;
   font-family: "Inter";
   font-size: 1.125rem;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
 }
 
 .weight--slight {

@@ -9,7 +9,24 @@ input {
   font-size: inherit;
 }
 
+select {
+  font-size: inherit;
+  padding: 1px 2px;
+}
+
 .duo {
   /* border: 1px solid black; */
   width: 45%;
+}
+
+.fs--smaller {
+  font-size: 1rem;
+}
+
+.form-gap {
+  gap: 26px;
+}
+
+.triple-partner {
+  width: 30%;
 }

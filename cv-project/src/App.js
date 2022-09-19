@@ -10,13 +10,22 @@ function App() {
     firstName: "",
     lastName: "",
     birthdayDay: "",
+    birthdayMonth: "",
+    birthdayYear: "",
+    isUSAddress: true,
+    addressUSLineOne: "",
+    addressUSLineTwo: "",
+    city: "",
+    state: "AL",
+    zipcode: "",
   });
 
   function handleChange(event) {
+    const { name, value, type, checked } = event.target;
     setFormData((prevFormData) => {
       return {
         ...prevFormData,
-        [event.target.name]: event.target.value,
+        [name]: type === "checkbox" ? checked : value,
       };
     });
   }
