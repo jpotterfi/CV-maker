@@ -6,7 +6,14 @@ import Personal from "./Components/Personal";
 import React from "react";
 
 function App() {
-  const [activeComponent, setActiveComponent] = React.useState("");
+  const [activeComponent, setActiveComponent] = React.useState({
+    personal: false,
+    experience: false,
+    education: false,
+    skills: false,
+    graphics: false,
+    photo: false,
+  });
   const [formData, setFormData] = React.useState({
     firstName: "",
     lastName: "",
@@ -23,6 +30,16 @@ function App() {
     email: "",
   });
   // console.table(formData);
+
+  function changeActiveComponent(name, value) {
+    console.log(name, value);
+    setActiveComponent(function (prevComponents) {
+      return {
+        ...prevComponents,
+        [name]: !value,
+      };
+    });
+  }
 
   function handleChange(event) {
     //handles phone entry, but in a bad way
@@ -52,7 +69,8 @@ function App() {
       <Personal
         handleChange={handleChange}
         data={formData}
-        activeComponent={activeComponent}
+        activeComponentData={activeComponent}
+        activeComponentToggle={changeActiveComponent}
       />
     </div>
   );
