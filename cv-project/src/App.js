@@ -2,7 +2,9 @@ import "./App.css";
 import Header from "./Components/Header";
 import "./Header.css";
 import "./Personal.css";
+import "./Experience.css";
 import Personal from "./Components/Personal";
+import Experience from "./Components/Experience";
 import React from "react";
 
 function App() {
@@ -24,14 +26,23 @@ function App() {
     addressUSLineOne: "",
     addressUSLineTwo: "",
     city: "",
+    country: "",
     state: "AL",
     zipcode: "",
     phone: "",
     email: "",
+    experience: [
+      {
+        experienceName: "Jeremy's Dojo",
+        experienceStarting: "",
+        experienceEnding: "",
+        experienceRole: "",
+        experienceDescription: "",
+      },
+    ],
   });
-  // console.table(formData);
 
-  console.table(activeComponent);
+  console.table(formData);
 
   React.useEffect(
     function () {
@@ -42,14 +53,11 @@ function App() {
 
   function colorComponentHeadings() {
     for (const property in activeComponent) {
-      console.log(property);
       if (activeComponent[property]) {
-        console.log(property + "is true");
         let active = document.getElementById(property + "Component");
         active.style.color = "#1f1f1f";
       }
       if (!activeComponent[property]) {
-        console.log(property + "is false");
         let unactive = document.getElementById(property + "Component");
 
         unactive.style.color = "#C3C3C3";
@@ -58,8 +66,6 @@ function App() {
   }
 
   function changeActiveComponent(name, value) {
-    console.log("changeActiveComponent");
-    console.log(name, !value);
     setActiveComponent(function (prevComponents) {
       return {
         ...prevComponents,
@@ -72,6 +78,8 @@ function App() {
     //handles phone entry, but in a bad way
     //maybe create separate handleChange for phone
     //if inputs become too crazy
+    // console.log("handling a change");
+    console.log(event);
     if (typeof event !== "object") {
       setFormData((prevFormData) => {
         return {
@@ -80,13 +88,30 @@ function App() {
         };
       });
     } else {
-      const { name, value, type, checked } = event.target;
-      setFormData((prevFormData) => {
-        return {
-          ...prevFormData,
-          [name]: type === "checkbox" ? checked : value,
-        };
-      });
+      const { name, value, type, checked, className, id } = event.target;
+      if (className === "experience") {
+        if (name === "experienceName") {
+          let experience = formData.experience;
+          for (const property in experience[id]) {
+            if (property === name) {
+              experience[id].experienceName = value;
+            }
+          }
+          setFormData((prevFormData) => {
+            return {
+              ...prevFormData,
+              experience,
+            };
+          });
+        }
+      } else {
+        setFormData((prevFormData) => {
+          return {
+            ...prevFormData,
+            [name]: type === "checkbox" ? checked : value,
+          };
+        });
+      }
     }
   }
 
@@ -94,6 +119,12 @@ function App() {
     <div className="App">
       <Header mode="Entry Mode" />
       <Personal
+        handleChange={handleChange}
+        data={formData}
+        activeComponentData={activeComponent}
+        activeComponentToggle={changeActiveComponent}
+      />
+      <Experience
         handleChange={handleChange}
         data={formData}
         activeComponentData={activeComponent}

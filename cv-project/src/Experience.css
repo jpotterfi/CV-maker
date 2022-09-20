@@ -1,0 +1,12 @@
+#header {
+  padding-inline: 25px;
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+}
+
+#addExperience {
+  height: 50px;
+  width: 100px;
+  background-color: black;
+}
