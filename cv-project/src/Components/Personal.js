@@ -2,17 +2,23 @@ import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 
 export default function Personal(props) {
+  // console.log("toggleActive");
+  function toggleActive() {
+    return props.activeComponentToggle(
+      "personal",
+      props.activeComponentData.personal
+    );
+  }
+
   return (
     <section id="personal">
       <h3
+        id="personalComponent"
         name="personal"
         value={props.activeComponentData.personal}
-        onClick={() =>
-          props.activeComponentToggle(
-            "personal",
-            props.activeComponentData.personal
-          )
-        }
+        onClick={function () {
+          toggleActive();
+        }}
       >
         Personal
       </h3>
@@ -367,6 +373,11 @@ export default function Personal(props) {
           </div>
         </form>
       )}
+      <h3 id="experienceComponent">experience</h3>
+      <h3 id="educationComponent">education</h3>
+      <h3 id="skillsComponent">skills</h3>
+      <h3 id="graphicsComponent">graphics</h3>
+      <h3 id="photoComponent">photo</h3>
     </section>
   );
 }

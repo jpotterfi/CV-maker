@@ -31,8 +31,35 @@ function App() {
   });
   // console.table(formData);
 
+  console.table(activeComponent);
+
+  React.useEffect(
+    function () {
+      colorComponentHeadings();
+    },
+    [activeComponent]
+  );
+
+  function colorComponentHeadings() {
+    for (const property in activeComponent) {
+      console.log(property);
+      if (activeComponent[property]) {
+        console.log(property + "is true");
+        let active = document.getElementById(property + "Component");
+        active.style.color = "#1f1f1f";
+      }
+      if (!activeComponent[property]) {
+        console.log(property + "is false");
+        let unactive = document.getElementById(property + "Component");
+
+        unactive.style.color = "#C3C3C3";
+      }
+    }
+  }
+
   function changeActiveComponent(name, value) {
-    console.log(name, value);
+    console.log("changeActiveComponent");
+    console.log(name, !value);
     setActiveComponent(function (prevComponents) {
       return {
         ...prevComponents,
