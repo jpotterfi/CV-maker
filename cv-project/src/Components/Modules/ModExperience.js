@@ -1,6 +1,6 @@
 export default function ModExperience(props) {
-  //   console.log(props.data.experience[0].experienceName);
-  //   console.log(props.data.experience.length - 1);
+  let counter = -1;
+  counter++;
   return (
     // experience: [
     //     {
@@ -19,8 +19,9 @@ export default function ModExperience(props) {
           placeholder="Employment or Project Name"
           name="experienceName"
           className="experience"
-          id={props.data.experience.length - 1}
+          id={props.counter}
           onChange={props.handleChange}
+          value={props.data.experience[props.counter].experienceName}
         />
       </div>
       <div className="row between">

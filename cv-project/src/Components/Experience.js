@@ -1,6 +1,12 @@
 import ModExperience from "./Modules/ModExperience";
 
 export default function Experience(props) {
+  let counter = 0;
+
+  function increaseCounter() {
+    counter++;
+  }
+
   function toggleActive() {
     return props.activeComponentToggle(
       "experience",
@@ -21,7 +27,11 @@ export default function Experience(props) {
         Experience
       </h3>
       {props.activeComponentData.experience && (
-        <ModExperience data={props.data} handleChange={props.handleChange} />
+        <ModExperience
+          data={props.data}
+          handleChange={props.handleChange}
+          counter={counter}
+        />
       )}
       <button id="addExperience"></button>
     </section>
