@@ -5,8 +5,9 @@
   width: inherit;
 }
 
-#addExperience {
+#button__addExperience {
   height: 50px;
   width: 100px;
   background-color: black;
+  color: white;
 }

@@ -1,27 +1,37 @@
 export default function ModExperience(props) {
-  let counter = -1;
-  counter++;
+  // function locateInArray() {
+  //   const experienceModules = props.experienceModules;
+
+  //   experienceModules.findIndex(function(mod){
+  //     return mod.moduleID
+  //   })
+  // }
+
   return (
-    // experience: [
-    //     {
-    //       experienceName: "",
-    //       experienceStarting: "",
-    //       experienceEnding: "",
-    //       experienceRole: "",
-    //       experienceDescription: "",
-    //     },
+    // <div>
+    //   <h1>Hello World</h1>
+    //   <h2>{props.experienceName}</h2>
+    // </div>
+
+    // // experience: [
+    // //     {
+    // //       experienceName: "",
+    // //       experienceStarting: "",
+    // //       experienceEnding: "",
+    // //       experienceRole: "",
+    // //       experienceDescription: "",
+    // //     },
     <form>
       <div className="column">
         <label className="weight--slight">Employment or Project Name</label>
         <input
-          //   key={props.data.experience.length}
           type="text"
           placeholder="Employment or Project Name"
           name="experienceName"
           className="experience"
-          id={props.counter}
-          onChange={props.handleChange}
-          value={props.data.experience[props.counter].experienceName}
+          value={props.experienceName}
+          onChange={props.changeExperience}
+          id={props.moduleID}
         />
       </div>
       <div className="row between">
@@ -29,8 +39,7 @@ export default function ModExperience(props) {
           <label>Starting</label>
           <select
             id="experienceStarting"
-            // value={props.data.birthdayYear}
-            // onChange={props.handleChange}
+            value={props.experienceStarting}
             name="experienceStarting"
           >
             <option value="">YYYY</option>
@@ -158,8 +167,7 @@ export default function ModExperience(props) {
           <label>Ending</label>
           <select
             id="experienceEnding"
-            // value={props.data.birthdayYear}
-            // onChange={props.handleChange}
+            value={props.experienceEnding}
             name="experienceEnding"
           >
             <option value="">YYYY</option>
@@ -287,25 +295,21 @@ export default function ModExperience(props) {
       <div className="column">
         <label className="weight--slight">Job Title or Role</label>
         <input
-          //   key={props.data.experience.length}
           type="text"
           placeholder="Job Title or Role"
           id="experienceRole"
           name="experienceRole"
-          //   onChange={props.handleChange}
-          //   value={props.data.addressUSLineOne}
+          value={props.experienceRole}
         />
       </div>
       <div className="column">
         <label className="weight--slight">Description</label>
         <input
-          //   key={props.data.experience.length}
           type="text"
           placeholder="Description"
           id="experienceDescription"
           name="experienceDescription"
-          //   onChange={props.handleChange}
-          //   value={props.data.addressUSLineOne}
+          value={props.experienceDescription}
         />
       </div>
     </form>

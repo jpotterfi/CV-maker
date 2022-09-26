@@ -6,8 +6,26 @@ import "./Experience.css";
 import Personal from "./Components/Personal";
 import Experience from "./Components/Experience";
 import React from "react";
+import { nanoid } from "nanoid";
 
 function App() {
+  const [experienceModules, setExperienceModules] = React.useState([
+    {
+      experienceName: "",
+      experienceStarting: "",
+      experienceEnding: "",
+      experienceRole: "",
+      experienceDescription: "",
+    },
+    {
+      experienceName: "",
+      experienceStarting: "",
+      experienceEnding: "",
+      experienceRole: "",
+      experienceDescription: "",
+    },
+  ]);
+
   const [activeComponent, setActiveComponent] = React.useState({
     personal: false,
     experience: false,
@@ -31,15 +49,6 @@ function App() {
     zipcode: "",
     phone: "",
     email: "",
-    experience: [
-      {
-        experienceName: "Jeremy's Dojo",
-        experienceStarting: "",
-        experienceEnding: "",
-        experienceRole: "",
-        experienceDescription: "",
-      },
-    ],
   });
 
   console.table(formData);
@@ -50,6 +59,36 @@ function App() {
     },
     [activeComponent]
   );
+
+  function changeExperience(event) {
+    const { name, value, id } = event.target;
+    console.log(name, value, id);
+    setExperienceModules(function (prevExperience) {
+      let newArray = [...prevExperience];
+      newArray[id] = {
+        ...prevExperience[id],
+        [name]: value,
+      };
+      return newArray;
+    });
+    console.log("newExperienceModules", experienceModules);
+  }
+
+  function addExperience() {
+    setExperienceModules(function (prev) {
+      return [
+        ...prev,
+        {
+          moduleID: nanoid(),
+          experienceName: "Rebecca's Roasthouse",
+          experienceStarting: "1993",
+          experienceEnding: "1999",
+          experienceRole: "Cook",
+          experienceDescription: "Smokin' Hot!",
+        },
+      ];
+    });
+  }
 
   function colorComponentHeadings() {
     for (const property in activeComponent) {
@@ -89,29 +128,12 @@ function App() {
       });
     } else {
       const { name, value, type, checked, className, id } = event.target;
-      if (className === "experience") {
-        if (name === "experienceName") {
-          let experience = formData.experience;
-          for (const property in experience[id]) {
-            if (property === name) {
-              experience[id].experienceName = value;
-            }
-          }
-          setFormData((prevFormData) => {
-            return {
-              ...prevFormData,
-              experience,
-            };
-          });
-        }
-      } else {
-        setFormData((prevFormData) => {
-          return {
-            ...prevFormData,
-            [name]: type === "checkbox" ? checked : value,
-          };
-        });
-      }
+      setFormData((prevFormData) => {
+        return {
+          ...prevFormData,
+          [name]: type === "checkbox" ? checked : value,
+        };
+      });
     }
   }
 
@@ -125,10 +147,12 @@ function App() {
         activeComponentToggle={changeActiveComponent}
       />
       <Experience
-        handleChange={handleChange}
         data={formData}
         activeComponentData={activeComponent}
         activeComponentToggle={changeActiveComponent}
+        experienceModules={experienceModules}
+        addExperience={addExperience}
+        changeExperience={changeExperience}
       />
     </div>
   );

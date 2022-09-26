@@ -1,11 +1,26 @@
 import ModExperience from "./Modules/ModExperience";
 
 export default function Experience(props) {
-  let counter = 0;
+  const expModArr = props.experienceModules;
+  console.log("experience modules", expModArr);
 
-  function increaseCounter() {
-    counter++;
-  }
+  let expModComponents = expModArr.map(function (mod, index) {
+    return (
+      <ModExperience
+        experienceName={props.experienceModules[index].experienceName}
+        experienceStarting={props.experienceModules[index].experienceStarting}
+        experienceEnding={props.experienceModules[index].experienceEnding}
+        experienceRole={props.experienceModules[index].experienceRole}
+        experienceDescription={
+          props.experienceModules[index].experienceDescription
+        }
+        moduleID={index}
+        changeExperience={props.changeExperience}
+      />
+    );
+  });
+
+  console.log("expModComponents", expModComponents);
 
   function toggleActive() {
     return props.activeComponentToggle(
@@ -26,14 +41,11 @@ export default function Experience(props) {
       >
         Experience
       </h3>
-      {props.activeComponentData.experience && (
-        <ModExperience
-          data={props.data}
-          handleChange={props.handleChange}
-          counter={counter}
-        />
-      )}
-      <button id="addExperience"></button>
+      {props.activeComponentData.experience && <h1>Basic</h1>}
+      {expModComponents}
+      <button id="button__addExperience" onClick={props.addExperience}>
+        Add Additional Experience
+      </button>
     </section>
   );
 }
