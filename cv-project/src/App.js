@@ -47,8 +47,6 @@ function App() {
     email: "",
   });
 
-  console.table(formData);
-
   React.useEffect(
     function () {
       colorComponentHeadings();
@@ -56,9 +54,21 @@ function App() {
     [activeComponent]
   );
 
-  function changeExperience(event) {
+  function changeSkill(event) {
     const { name, value, id } = event.target;
     console.log(name, value, id);
+    setSkillsModules(function (prevSkills) {
+      let newArray = [...prevSkills];
+      newArray[id] = value;
+      return newArray;
+    });
+  }
+
+  console.log(skillsModules);
+
+  function changeExperience(event) {
+    const { name, value, id } = event.target;
+
     setExperienceModules(function (prevExperience) {
       let newArray = [...prevExperience];
       newArray[id] = {
@@ -67,7 +77,12 @@ function App() {
       };
       return newArray;
     });
-    console.log("newExperienceModules", experienceModules);
+  }
+
+  function addSkill() {
+    setSkillsModules(function (prevSkills) {
+      return [...prevSkills, ""];
+    });
   }
 
   function addExperience() {
@@ -113,8 +128,7 @@ function App() {
     //handles phone entry, but in a bad way
     //maybe create separate handleChange for phone
     //if inputs become too crazy
-    // console.log("handling a change");
-    console.log(event);
+
     if (typeof event !== "object") {
       setFormData((prevFormData) => {
         return {
@@ -154,6 +168,8 @@ function App() {
         activeComponentData={activeComponent}
         activeComponentToggle={changeActiveComponent}
         skillsModules={skillsModules}
+        changeSkill={changeSkill}
+        addSkill={addSkill}
       />
     </div>
   );

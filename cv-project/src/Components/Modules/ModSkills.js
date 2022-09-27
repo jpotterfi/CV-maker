@@ -1,3 +1,18 @@
 export default function ModSkills(props) {
-  return <h1>{props.skillsName}</h1>;
+  return (
+    <form>
+      <div className="column">
+        <label className="weight--slight">Skill</label>
+        <input
+          type="text"
+          placeholder="Skill Name"
+          name="skillName"
+          className="skill"
+          value={props.skillName}
+          onChange={props.changeSkill}
+          id={props.moduleID}
+        />
+      </div>
+    </form>
+  );
 }

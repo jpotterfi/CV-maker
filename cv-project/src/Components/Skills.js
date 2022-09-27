@@ -6,7 +6,13 @@ export default function Skills(props) {
   console.log(skillsModArr[0]);
 
   const skillsModComponents = skillsModArr.map(function (mod, index) {
-    return <ModSkills skillsName={skillsModArr[index]} />;
+    return (
+      <ModSkills
+        skillsName={skillsModArr[index]}
+        moduleID={index}
+        changeSkill={props.changeSkill}
+      />
+    );
   });
   console.log("skillsModComponents", skillsModComponents);
 
@@ -28,8 +34,15 @@ export default function Skills(props) {
       >
         Skills
       </h3>
-      {skillsModComponents}
-      {props.activeComponentData.skills && <h1>hello world</h1>}
+
+      {props.activeComponentData.skills && (
+        <div>
+          {skillsModComponents}
+          <button id="button__addExperience" onClick={props.addSkill}>
+            Add Additional Skill
+          </button>
+        </div>
+      )}
     </section>
   );
 
