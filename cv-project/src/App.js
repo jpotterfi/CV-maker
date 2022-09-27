@@ -6,11 +6,21 @@ import "./Experience.css";
 import Personal from "./Components/Personal";
 import Skills from "./Components/Skills";
 import Experience from "./Components/Experience";
+import Education from "./Components/Education";
 import React from "react";
 import { nanoid } from "nanoid";
 
 function App() {
   const [skillsModules, setSkillsModules] = React.useState(["test"]);
+
+  const [educationModules, setEducationModules] = React.useState([
+    {
+      educationName: "",
+      degreeName: "",
+      educationStarting: "",
+      educationEnding: "",
+    },
+  ]);
 
   const [experienceModules, setExperienceModules] = React.useState([
     {
@@ -56,7 +66,7 @@ function App() {
 
   function changeSkill(event) {
     const { name, value, id } = event.target;
-    console.log(name, value, id);
+
     setSkillsModules(function (prevSkills) {
       let newArray = [...prevSkills];
       newArray[id] = value;
@@ -64,7 +74,20 @@ function App() {
     });
   }
 
-  console.log(skillsModules);
+  console.log(educationModules);
+
+  function changeEducation(event) {
+    const { name, value, id } = event.target;
+    console.log(name, value, id);
+    setEducationModules(function (prevEducation) {
+      let newArray = [...prevEducation];
+      newArray[id] = {
+        ...prevEducation[id],
+        [name]: value,
+      };
+      return newArray;
+    });
+  }
 
   function changeExperience(event) {
     const { name, value, id } = event.target;
@@ -82,6 +105,20 @@ function App() {
   function addSkill() {
     setSkillsModules(function (prevSkills) {
       return [...prevSkills, ""];
+    });
+  }
+
+  function addEducation() {
+    setEducationModules(function (prev) {
+      return [
+        ...prev,
+        {
+          educationName: "",
+          degreeName: "",
+          educationStarting: "",
+          educationEnding: "",
+        },
+      ];
     });
   }
 
@@ -170,6 +207,13 @@ function App() {
         skillsModules={skillsModules}
         changeSkill={changeSkill}
         addSkill={addSkill}
+      />
+      <Education
+        activeComponentData={activeComponent}
+        activeComponentToggle={changeActiveComponent}
+        educationModules={educationModules}
+        changeEducation={changeEducation}
+        addEducation={addEducation}
       />
     </div>
   );
