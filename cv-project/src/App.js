@@ -7,6 +7,7 @@ import Personal from "./Components/Personal";
 import Skills from "./Components/Skills";
 import Experience from "./Components/Experience";
 import Education from "./Components/Education";
+import Graphics from "./Components/Graphics";
 import React from "react";
 import { nanoid } from "nanoid";
 
@@ -215,6 +216,7 @@ function App() {
         changeEducation={changeEducation}
         addEducation={addEducation}
       />
+      <Graphics />
     </div>
   );
 }
