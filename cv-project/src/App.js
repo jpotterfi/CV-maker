@@ -4,19 +4,15 @@ import "./Header.css";
 import "./Personal.css";
 import "./Experience.css";
 import Personal from "./Components/Personal";
+import Skills from "./Components/Skills";
 import Experience from "./Components/Experience";
 import React from "react";
 import { nanoid } from "nanoid";
 
 function App() {
+  const [skillsModules, setSkillsModules] = React.useState(["test"]);
+
   const [experienceModules, setExperienceModules] = React.useState([
-    {
-      experienceName: "",
-      experienceStarting: "",
-      experienceEnding: "",
-      experienceRole: "",
-      experienceDescription: "",
-    },
     {
       experienceName: "",
       experienceStarting: "",
@@ -79,12 +75,12 @@ function App() {
       return [
         ...prev,
         {
-          moduleID: nanoid(),
-          experienceName: "Rebecca's Roasthouse",
-          experienceStarting: "1993",
-          experienceEnding: "1999",
-          experienceRole: "Cook",
-          experienceDescription: "Smokin' Hot!",
+          moduleID: "",
+          experienceName: "",
+          experienceStarting: "",
+          experienceEnding: "",
+          experienceRole: "",
+          experienceDescription: "",
         },
       ];
     });
@@ -153,6 +149,11 @@ function App() {
         experienceModules={experienceModules}
         addExperience={addExperience}
         changeExperience={changeExperience}
+      />
+      <Skills
+        activeComponentData={activeComponent}
+        activeComponentToggle={changeActiveComponent}
+        skillsModules={skillsModules}
       />
     </div>
   );

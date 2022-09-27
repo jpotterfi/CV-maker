@@ -38,9 +38,10 @@ export default function ModExperience(props) {
         <div className="column duo">
           <label>Starting</label>
           <select
-            id="experienceStarting"
+            id={props.moduleID}
             value={props.experienceStarting}
             name="experienceStarting"
+            onChange={props.changeExperience}
           >
             <option value="">YYYY</option>
             <option value="2022">2022</option>
@@ -166,7 +167,8 @@ export default function ModExperience(props) {
         <div className="column duo">
           <label>Ending</label>
           <select
-            id="experienceEnding"
+            id={props.moduleID}
+            onChange={props.changeExperience}
             value={props.experienceEnding}
             name="experienceEnding"
           >
@@ -297,19 +299,20 @@ export default function ModExperience(props) {
         <input
           type="text"
           placeholder="Job Title or Role"
-          id="experienceRole"
+          id={props.moduleID}
           name="experienceRole"
           value={props.experienceRole}
+          onChange={props.changeExperience}
         />
       </div>
       <div className="column">
         <label className="weight--slight">Description</label>
-        <input
-          type="text"
+        <textarea
           placeholder="Description"
-          id="experienceDescription"
+          id={props.moduleID}
           name="experienceDescription"
           value={props.experienceDescription}
+          onChange={props.changeExperience}
         />
       </div>
     </form>

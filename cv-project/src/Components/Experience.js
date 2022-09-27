@@ -41,8 +41,7 @@ export default function Experience(props) {
       >
         Experience
       </h3>
-      {props.activeComponentData.experience && <h1>Basic</h1>}
-      {expModComponents}
+      {props.activeComponentData.experience && expModComponents}
       <button id="button__addExperience" onClick={props.addExperience}>
         Add Additional Experience
       </button>
