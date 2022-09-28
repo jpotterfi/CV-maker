@@ -5,19 +5,50 @@ import Bluered from "../Banners/bluered.svg";
 
 export default function Graphics() {
   return (
-    <section id="graphics">
-      <input type="radio" id="purple" />
-      <label htmlFor="purple">purple</label>
-      <br />
-      <input type="radio" id="orange" />
-      <label htmlFor="orange">orange</label>
-      <br />
-      <input type="radio" id="bluegrey" />
-      <label htmlFor="bluegrey">bluegrey</label>
-      <br />
-      <input type="radio" id="bluered" />
-      <label htmlFor="bluered">bluered</label>
-      <br />
+    <section id="graphics" className="column">
+      <div className="column  banner__duo">
+        <label
+          className="banner"
+          htmlFor="purple"
+          style={{
+            backgroundImage: `url(${Purple})`,
+          }}
+        ></label>
+        <input type="radio" id="purple" />
+      </div>
+
+      <div className="column banner__duo">
+        <label
+          className="banner"
+          htmlFor="orange"
+          style={{
+            backgroundImage: `url(${Orange})`,
+          }}
+        ></label>
+        <input type="radio" id="orange" />
+      </div>
+
+      <div className="column banner__duo">
+        <label
+          className="banner"
+          htmlFor="bluegrey"
+          style={{
+            backgroundImage: `url(${Bluegrey})`,
+          }}
+        ></label>
+        <input type="radio" id="bluegrey" />
+      </div>
+
+      <div className="column banner__duo">
+        <label
+          className="banner"
+          htmlFor="bluered"
+          style={{
+            backgroundImage: `url(${Bluered})`,
+          }}
+        ></label>
+        <input type="radio" id="bluered" />
+      </div>
     </section>
   );
 }

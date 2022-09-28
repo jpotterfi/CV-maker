@@ -1,0 +1,11 @@
+.banner {
+  height: 100px;
+  width: 200px;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid black;
+}
+
+.banner__duo {
+  align-items: center;
+}
