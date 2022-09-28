@@ -57,6 +57,7 @@ function App() {
     zipcode: "",
     phone: "",
     email: "",
+    banner: "",
   });
 
   React.useEffect(
@@ -76,7 +77,7 @@ function App() {
     });
   }
 
-  console.log(educationModules);
+  console.log(formData.banner);
 
   function changeEducation(event) {
     const { name, value, id } = event.target;
@@ -177,6 +178,7 @@ function App() {
       });
     } else {
       const { name, value, type, checked, className, id } = event.target;
+      console.log(name, value, type, checked);
       setFormData((prevFormData) => {
         return {
           ...prevFormData,
@@ -217,7 +219,12 @@ function App() {
         changeEducation={changeEducation}
         addEducation={addEducation}
       />
-      <Graphics />
+      <Graphics
+        activeComponentData={activeComponent}
+        activeComponentToggle={changeActiveComponent}
+        data={formData}
+        handleChange={handleChange}
+      />
     </div>
   );
 }
