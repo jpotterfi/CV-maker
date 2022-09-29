@@ -9,10 +9,13 @@ import Skills from "./Components/Skills";
 import Experience from "./Components/Experience";
 import Education from "./Components/Education";
 import Graphics from "./Components/Graphics";
+import Photo from "./Components/Photo";
 import React from "react";
 import { nanoid } from "nanoid";
 
 function App() {
+  const [photoFile, setPhotoFile] = React.useState("");
+
   const [skillsModules, setSkillsModules] = React.useState(["test"]);
 
   const [educationModules, setEducationModules] = React.useState([
@@ -58,6 +61,7 @@ function App() {
     phone: "",
     email: "",
     banner: "",
+    fileOption: "upload",
   });
 
   React.useEffect(
@@ -66,6 +70,13 @@ function App() {
     },
     [activeComponent]
   );
+
+  function changePhoto(event) {
+    const { value } = event.target;
+    setPhotoFile(value);
+  }
+
+  console.log("photoFile", photoFile);
 
   function changeSkill(event) {
     const { name, value, id } = event.target;
@@ -77,7 +88,7 @@ function App() {
     });
   }
 
-  console.log(formData.banner);
+  console.log(formData.photoFile);
 
   function changeEducation(event) {
     const { name, value, id } = event.target;
@@ -224,6 +235,14 @@ function App() {
         activeComponentToggle={changeActiveComponent}
         data={formData}
         handleChange={handleChange}
+      />
+      <Photo
+        activeComponentData={activeComponent}
+        activeComponentToggle={changeActiveComponent}
+        data={formData}
+        handleChange={handleChange}
+        changePhoto={changePhoto}
+        photoFile={photoFile}
       />
     </div>
   );

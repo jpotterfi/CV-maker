@@ -387,8 +387,6 @@ export default function Personal(props) {
           </div>
         </form>
       )}
-
-      <h3 id="photoComponent">photo</h3>
     </section>
   );
 }
