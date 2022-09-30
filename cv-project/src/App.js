@@ -16,6 +16,7 @@ import { nanoid } from "nanoid";
 function App() {
   const [photoFile, setPhotoFile] = React.useState("");
 
+  console.log("photoFile", photoFile);
   const [skillsModules, setSkillsModules] = React.useState(["test"]);
 
   const [educationModules, setEducationModules] = React.useState([
@@ -61,7 +62,7 @@ function App() {
     phone: "",
     email: "",
     banner: "",
-    fileOption: "upload",
+    usePhoto: true,
   });
 
   React.useEffect(
@@ -72,8 +73,7 @@ function App() {
   );
 
   function changePhoto(event) {
-    const { value } = event.target;
-    setPhotoFile(value);
+    setPhotoFile(URL.createObjectURL(event.target.files[0]));
   }
 
   console.log("photoFile", photoFile);

@@ -1,3 +1,5 @@
+import Button from "@mui/material/Button";
+
 export default function Photo(props) {
   let photo = `url(${props.photoFile}`;
   console.log("photo", photo);
@@ -22,49 +24,44 @@ export default function Photo(props) {
       </h3>
       <div className="column">
         <div className="row">
-          <div className="row">
-            <label className="fileOption" htmlFor="upload">
-              Upload File
-            </label>
-            <input
-              name="fileOption"
-              value="upload"
-              type="radio"
-              id="upload"
-              checked={props.data.fileOption === "upload"}
-              onChange={props.handleChange}
-            />
-          </div>
-          <div className="row">
-            <label className="fileOption" htmlFor="importURL">
-              Import URL
-            </label>
-            <input
-              name="fileOption"
-              value="importURL"
-              type="radio"
-              id="importURL"
-              checked={props.data.fileOption === "importURL"}
-              onChange={props.handleChange}
-            />
-          </div>
-        </div>
-        <input
-          type="file"
-          accept="image/png, image/jpeg"
-          id="photoFile"
-          name="photoFile"
-          onChange={props.changePhoto}
-        />
-        <div className="column duo">
-          <label className="weight--slight">Image URL</label>
+          <label className="usePhoto" htmlFor="usePhoto">
+            Use a Photo
+          </label>
           <input
-            type="text"
-            placeholder="Paste image URL"
-            name="imageURLString"
+            name="usePhoto"
+            type="checkbox"
+            id="usePhoto"
+            checked={props.data.usePhoto}
+            onChange={props.handleChange}
           />
         </div>
-        <img src={photo}></img>
+        {props.data.usePhoto ? (
+          <div>
+            <Button variant="contained" component="label">
+              Upload
+              <input
+                hidden
+                accept="image/*"
+                type="file"
+                onInput={props.changePhoto}
+              />
+            </Button>
+            <div
+              id="preview"
+              style={{
+                backgroundImage: `url(${props.photoFile})`,
+                height: "300px",
+                width: "300px",
+                borderRadius: "50%",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+              }}
+            ></div>
+          </div>
+        ) : (
+          <div>No Problem! We won't include a photo on the CV.</div>
+        )}
       </div>
     </section>
   );
