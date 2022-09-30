@@ -61,7 +61,7 @@ function App() {
     zipcode: "",
     phone: "",
     email: "",
-    banner: "",
+    banner: "purple",
     usePhoto: true,
   });
 
@@ -168,12 +168,22 @@ function App() {
 
   function changeActiveComponent(name, value) {
     setActiveComponent(function (prevComponents) {
+      let newObj = prevComponents;
+      for (const property in newObj) {
+        if (property !== name) {
+          newObj[property] = false;
+        }
+      }
       return {
         ...prevComponents,
         [name]: !value,
       };
     });
   }
+  // return {
+  //   ...prevComponents,
+  //   [name]: !value,
+  // };
 
   function handleChange(event) {
     //handles phone entry, but in a bad way

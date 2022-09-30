@@ -19,7 +19,7 @@ export default function Skills(props) {
   function toggleActive() {
     return props.activeComponentToggle(
       "skills",
-      props.activeComponentData.experience
+      props.activeComponentData.skills
     );
   }
   return (

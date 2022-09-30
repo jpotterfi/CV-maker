@@ -7,7 +7,7 @@ export default function Graphics(props) {
   function toggleActive() {
     return props.activeComponentToggle(
       "graphics",
-      props.activeComponentData.experience
+      props.activeComponentData.graphics
     );
   }
   return (

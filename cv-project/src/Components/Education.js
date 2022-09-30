@@ -20,7 +20,7 @@ export default function Education(props) {
   function toggleActive() {
     return props.activeComponentToggle(
       "education",
-      props.activeComponentData.experience
+      props.activeComponentData.education
     );
   }
   return (
