@@ -23,7 +23,7 @@ export default function Photo(props) {
         <div className="headerText">Photo</div>
       </h3>
       {props.activeComponentData.photo && (
-        <div className="column">
+        <div className="column form-gap">
           <div className="row">
             <label className="usePhoto" htmlFor="usePhoto">
               Use a photo
@@ -61,7 +61,7 @@ export default function Photo(props) {
               ></div>
             </div>
           ) : (
-            <div>No Problem! We won't include a photo on the CV.</div>
+            <div>No Problem! We won't include a photo on your CV.</div>
           )}
         </div>
       )}

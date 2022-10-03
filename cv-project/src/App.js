@@ -64,6 +64,7 @@ function App() {
     email: "",
     banner: "purple",
     usePhoto: true,
+    isPreviewing: false,
   });
 
   React.useEffect(
@@ -211,7 +212,11 @@ function App() {
 
   return (
     <div className="App">
-      <Header mode="Entry Mode" />
+      <Header
+        mode={formData.isPreviewing ? "Preview Mode" : "Edit Mode"}
+        handleChange={handleChange}
+        data={formData}
+      />
       <Personal
         handleChange={handleChange}
         data={formData}

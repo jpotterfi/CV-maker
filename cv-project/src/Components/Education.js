@@ -37,24 +37,13 @@ export default function Education(props) {
       </h3>
 
       {props.activeComponentData.education && (
-        <div>
+        <div className="column form-gap">
           {educationModComponents}
-          <button id="button__addExperience" onClick={props.addEducation}>
-            Add Additional Education
+          <button className="button__add" onClick={props.addEducation}>
+            Additional Education
           </button>
         </div>
       )}
     </section>
-    // {educationModComponents}
-    // <button id="button__addExperience" onClick={props.addSkill}>
-    //   Add Additional Skill
-    // </button>
-
-    // <ModEducation
-    //   educationName={props.educationName}
-    //   degreeName={props.degreeName}
-    //   educationStarting={props.educationStarting}
-    //   educationEnding={props.educationEnding}
-    // />
   );
 }

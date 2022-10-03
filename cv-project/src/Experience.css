@@ -1,6 +1,9 @@
-#button__addExperience {
+.button__add {
+  font-family: "Inter";
   height: 50px;
   width: 100px;
   background-color: black;
   color: white;
+  font-weight: 700;
+  align-self: center;
 }

@@ -30,3 +30,7 @@ h3 {
 .headerText:hover {
   color: black;
 }
+
+.form-gap {
+  gap: 26px;
+}

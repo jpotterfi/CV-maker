@@ -313,6 +313,7 @@ export default function ModExperience(props) {
           name="experienceDescription"
           value={props.experienceDescription}
           onChange={props.changeExperience}
+          style={{ fontFamily: "Inter" }}
         />
       </div>
     </form>

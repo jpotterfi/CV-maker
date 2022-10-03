@@ -8,4 +8,13 @@
 
 .banner__duo {
   align-items: center;
+  gap: 10px;
+}
+
+.banner__group {
+  padding-bottom: 16px;
+}
+
+#graphics {
+  background-color: #ebebeb;
 }

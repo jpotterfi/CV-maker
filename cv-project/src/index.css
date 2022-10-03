@@ -134,6 +134,7 @@ body,
 .App {
   height: 100vh;
   width: 100vw;
+  background-color: #ebebeb;
 }
 
 body {
@@ -182,12 +183,4 @@ form {
 
 .weight--slight {
   font-weight: 500;
-}
-
-h3 {
-  font-size: 2.25rem;
-  font-family: "Roboto";
-  font-weight: 500;
-  color: #c3c3c3;
-  cursor: pointer;
 }

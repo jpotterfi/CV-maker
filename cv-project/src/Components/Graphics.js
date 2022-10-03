@@ -23,7 +23,8 @@ export default function Graphics(props) {
         <div className="headerText">Graphics</div>
       </h3>
       {props.activeComponentData.graphics && (
-        <div>
+        <div className="column form-gap banner__group">
+          <div>Pick a banner for your CV:</div>
           <div className="column  banner__duo">
             <label
               className="banner"
