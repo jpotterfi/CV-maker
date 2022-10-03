@@ -6,10 +6,9 @@
   justify-content: space-between;
   align-items: center;
   min-height: fit-content;
-  height: 10%;
   font-size: 1.125rem;
   font-family: "Roboto";
-  padding-inline: 25px;
+  padding: 25px;
   font-weight: 900;
 }
 
@@ -18,9 +17,6 @@
   flex-direction: row;
   align-items: center;
   gap: 16px;
-}
-
-h1 {
 }
 
 /* The switch - the box around the slider */

@@ -1,4 +1,5 @@
 import "./App.css";
+import "./Components/Preview";
 import "./Graphics.css";
 import Header from "./Components/Header";
 import "./Header.css";
@@ -11,8 +12,10 @@ import Education from "./Components/Education";
 import Graphics from "./Components/Graphics";
 import Photo from "./Components/Photo";
 import React from "react";
+import "./Preview.css";
 import { nanoid } from "nanoid";
 import { hover } from "@testing-library/user-event/dist/hover";
+import Preview from "./Components/Preview";
 
 function App() {
   const [photoFile, setPhotoFile] = React.useState("");
@@ -217,48 +220,54 @@ function App() {
         handleChange={handleChange}
         data={formData}
       />
-      <Personal
-        handleChange={handleChange}
-        data={formData}
-        activeComponentData={activeComponent}
-        activeComponentToggle={changeActiveComponent}
-      />
-      <Experience
-        data={formData}
-        activeComponentData={activeComponent}
-        activeComponentToggle={changeActiveComponent}
-        experienceModules={experienceModules}
-        addExperience={addExperience}
-        changeExperience={changeExperience}
-      />
-      <Skills
-        activeComponentData={activeComponent}
-        activeComponentToggle={changeActiveComponent}
-        skillsModules={skillsModules}
-        changeSkill={changeSkill}
-        addSkill={addSkill}
-      />
-      <Education
-        activeComponentData={activeComponent}
-        activeComponentToggle={changeActiveComponent}
-        educationModules={educationModules}
-        changeEducation={changeEducation}
-        addEducation={addEducation}
-      />
-      <Graphics
-        activeComponentData={activeComponent}
-        activeComponentToggle={changeActiveComponent}
-        data={formData}
-        handleChange={handleChange}
-      />
-      <Photo
-        activeComponentData={activeComponent}
-        activeComponentToggle={changeActiveComponent}
-        data={formData}
-        handleChange={handleChange}
-        changePhoto={changePhoto}
-        photoFile={photoFile}
-      />
+      {!formData.isPreviewing ? (
+        <div className="App">
+          <Personal
+            handleChange={handleChange}
+            data={formData}
+            activeComponentData={activeComponent}
+            activeComponentToggle={changeActiveComponent}
+          />
+          <Experience
+            data={formData}
+            activeComponentData={activeComponent}
+            activeComponentToggle={changeActiveComponent}
+            experienceModules={experienceModules}
+            addExperience={addExperience}
+            changeExperience={changeExperience}
+          />
+          <Skills
+            activeComponentData={activeComponent}
+            activeComponentToggle={changeActiveComponent}
+            skillsModules={skillsModules}
+            changeSkill={changeSkill}
+            addSkill={addSkill}
+          />
+          <Education
+            activeComponentData={activeComponent}
+            activeComponentToggle={changeActiveComponent}
+            educationModules={educationModules}
+            changeEducation={changeEducation}
+            addEducation={addEducation}
+          />
+          <Graphics
+            activeComponentData={activeComponent}
+            activeComponentToggle={changeActiveComponent}
+            data={formData}
+            handleChange={handleChange}
+          />
+          <Photo
+            activeComponentData={activeComponent}
+            activeComponentToggle={changeActiveComponent}
+            data={formData}
+            handleChange={handleChange}
+            changePhoto={changePhoto}
+            photoFile={photoFile}
+          />
+        </div>
+      ) : (
+        <Preview data={formData} photoFile={photoFile} />
+      )}
     </div>
   );
 }
