@@ -33,7 +33,7 @@ export default function Education(props) {
           toggleActive();
         }}
       >
-        Education
+        <div className="headerText">Education</div>
       </h3>
 
       {props.activeComponentData.education && (

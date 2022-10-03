@@ -20,13 +20,13 @@ export default function Photo(props) {
           toggleActive();
         }}
       >
-        Photo
+        <div className="headerText">Photo</div>
       </h3>
       {props.activeComponentData.photo && (
         <div className="column">
           <div className="row">
             <label className="usePhoto" htmlFor="usePhoto">
-              Use a Photo
+              Use a photo
             </label>
             <input
               name="usePhoto"

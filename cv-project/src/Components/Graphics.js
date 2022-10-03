@@ -20,7 +20,7 @@ export default function Graphics(props) {
           toggleActive();
         }}
       >
-        Graphics
+        <div className="headerText">Graphics</div>
       </h3>
       {props.activeComponentData.graphics && (
         <div>

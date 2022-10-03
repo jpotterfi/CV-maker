@@ -12,6 +12,7 @@ import Graphics from "./Components/Graphics";
 import Photo from "./Components/Photo";
 import React from "react";
 import { nanoid } from "nanoid";
+import { hover } from "@testing-library/user-event/dist/hover";
 
 function App() {
   const [photoFile, setPhotoFile] = React.useState("");
@@ -153,15 +154,14 @@ function App() {
   }
 
   function colorComponentHeadings() {
+    console.log("coloringHeadings");
     for (const property in activeComponent) {
+      let component = document.getElementById(property + "Component");
       if (activeComponent[property]) {
-        let active = document.getElementById(property + "Component");
-        active.style.color = "#1f1f1f";
+        component.style.color = "#1f1f1f";
       }
       if (!activeComponent[property]) {
-        let unactive = document.getElementById(property + "Component");
-
-        unactive.style.color = "#C3C3C3";
+        component.style.color = "#C3C3C3";
       }
     }
   }

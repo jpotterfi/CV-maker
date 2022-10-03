@@ -39,12 +39,16 @@ export default function Experience(props) {
           toggleActive();
         }}
       >
-        Experience
+        <div className="headerText">Experience</div>
       </h3>
-      {props.activeComponentData.experience && expModComponents}
-      <button id="button__addExperience" onClick={props.addExperience}>
-        Add Additional Experience
-      </button>
+      {props.activeComponentData.experience && (
+        <div className="column">
+          {expModComponents}
+          <button id="button__addExperience" onClick={props.addExperience}>
+            Add Additional Experience
+          </button>
+        </div>
+      )}
     </section>
   );
 }

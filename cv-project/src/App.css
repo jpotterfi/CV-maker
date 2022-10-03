@@ -4,3 +4,29 @@
   background-color: #ebebeb;
   gap: 26px;
 }
+
+#experience,
+#personal,
+#skills,
+#education,
+#experience,
+#photo,
+#graphics {
+  padding-inline: 25px;
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  gap: 1rem;
+}
+
+h3 {
+  font-size: 2.25rem;
+  font-family: "Roboto";
+  font-weight: 500;
+  color: #c3c3c3;
+  cursor: pointer;
+}
+
+.headerText:hover {
+  color: black;
+}

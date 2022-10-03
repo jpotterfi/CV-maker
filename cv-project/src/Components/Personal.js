@@ -20,7 +20,7 @@ export default function Personal(props) {
           toggleActive();
         }}
       >
-        Personal
+        <div className="headerText">Personal</div>
       </h3>
       {props.activeComponentData.personal && (
         <form>
@@ -48,7 +48,27 @@ export default function Personal(props) {
           </div>
           <div className="column">
             <label className="weight--slight">Birthday</label>
-            <div className="row between">
+            <div className="row birthday">
+              <select
+                id="birthdayMonth"
+                value={props.data.birthdayMonth}
+                onChange={props.handleChange}
+                name="birthdayMonth"
+              >
+                <option value="">MM</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
               <select
                 id="birthdayDay"
                 value={props.data.birthdayDay}
@@ -87,27 +107,6 @@ export default function Personal(props) {
                 <option value="29">29</option>
                 <option value="30">30</option>
                 <option value="31">31</option>
-              </select>
-
-              <select
-                id="birthdayMonth"
-                value={props.data.birthdayMonth}
-                onChange={props.handleChange}
-                name="birthdayMonth"
-              >
-                <option value="">MM</option>
-                <option value="01">01</option>
-                <option value="02">02</option>
-                <option value="03">03</option>
-                <option value="04">04</option>
-                <option value="05">05</option>
-                <option value="06">06</option>
-                <option value="07">07</option>
-                <option value="08">08</option>
-                <option value="09">09</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
               </select>
 
               <select

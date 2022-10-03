@@ -32,7 +32,7 @@ export default function Skills(props) {
           toggleActive();
         }}
       >
-        Skills
+        <div className="headerText">Skills</div>
       </h3>
 
       {props.activeComponentData.skills && (

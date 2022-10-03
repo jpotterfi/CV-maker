@@ -30,3 +30,11 @@ select {
 .triple-partner {
   width: 30%;
 }
+
+.birthday {
+  gap: 1rem;
+}
+
+#email {
+  width: 105%;
+}
