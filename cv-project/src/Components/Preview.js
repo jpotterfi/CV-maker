@@ -2,6 +2,8 @@ import Purple from "../Banners/purple.svg";
 import Orange from "../Banners/orange.svg";
 import Bluegrey from "../Banners/bluegrey.svg";
 import Bluered from "../Banners/bluered.svg";
+import PreviewAbout from "./PreviewAbout";
+import PreviewExperience from "./PreviewExperience";
 export default function Preview(props) {
   let colorScheme;
   let bannerImage;
@@ -36,7 +38,7 @@ export default function Preview(props) {
   console.log("photoStyle", photoStyle);
 
   return (
-    <div className="column preview__bannerduo">
+    <div>
       <div
         id="preview__banner"
         style={{ backgroundImage: `url(${bannerImage})` }}
@@ -48,6 +50,13 @@ export default function Preview(props) {
           style={{ ...photoStyle, ...colorScheme }}
         ></div>
       )}
+      <div id="preview__content">
+        <PreviewAbout data={props.data} />
+        <PreviewExperience
+          data={props.data}
+          experienceModules={props.experienceModules}
+        />
+      </div>
     </div>
   );
 }

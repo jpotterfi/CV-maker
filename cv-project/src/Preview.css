@@ -10,20 +10,63 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
-  top: 2rem;
+  bottom: 150px;
   margin-left: auto;
   margin-right: auto;
   border: 8px solid;
 }
 
-.preview__bannerduo {
-  position: relative;
-}
-
 .overlay {
   z-index: 9;
   margin: 30px;
+}
+
+#preview__content {
+  margin-top: -150px;
+  padding-inline: 26px;
+}
+
+.preview__gap_smaller {
+  gap: 16px;
+}
+
+.preview__gap_larger {
+  gap: 26px;
+}
+
+.preview__header {
+  cursor: auto;
+}
+
+.preview__experience__mod {
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.preview__experience__name {
+  font-family: "Roboto";
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.preview__experience__role {
+  font-family: "Roboto";
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 27px;
+  font-style: italic;
+}
+.preview__experience__description {
+  font-family: "Roboto";
+  font-size: 1.125rem;
+  font-weight: 100;
+  line-height: 27px;
+}
+.preview__experience__dates {
+  font-family: "Roboto";
+  font-size: 1.125rem;
+  font-weight: 900;
+  line-height: 21px;
 }

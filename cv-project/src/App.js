@@ -34,11 +34,12 @@ function App() {
 
   const [experienceModules, setExperienceModules] = React.useState([
     {
-      experienceName: "",
-      experienceStarting: "",
-      experienceEnding: "",
-      experienceRole: "",
-      experienceDescription: "",
+      experienceName: "Jeremy's Dojo",
+      experienceStarting: "1992",
+      experienceEnding: "1993",
+      experienceRole: "Instructor",
+      experienceDescription:
+        "Led the development of Harvest Farm 2077, an award-winning farm simulation game set in a futuristic Tokyo setting. Headed up a team of five developers and collaborated with many departments to bring the game to life.",
     },
   ]);
 
@@ -266,7 +267,11 @@ function App() {
           />
         </div>
       ) : (
-        <Preview data={formData} photoFile={photoFile} />
+        <Preview
+          data={formData}
+          photoFile={photoFile}
+          experienceModules={experienceModules}
+        />
       )}
     </div>
   );
