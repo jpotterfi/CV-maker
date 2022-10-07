@@ -8,22 +8,57 @@ import PreviewEducation from "./PreviewEducation";
 import PreviewSkills from "./PreviewSkills";
 
 export default function Preview(props) {
-  let colorScheme;
+  let photoBorderColor;
+  let headerColor;
+  let subHeaderColor;
   let bannerImage;
   if (props.data.banner === "purple") {
     bannerImage = Purple;
-    colorScheme = {
-      borderColor: "#6E44FF",
+    photoBorderColor = {
+      borderColor: "black",
+    };
+    headerColor = {
+      color: "#6E44FF",
+    };
+    subHeaderColor = {
+      color: "#EF7A85",
     };
   }
   if (props.data.banner === "orange") {
     bannerImage = Orange;
+    photoBorderColor = {
+      borderColor: "black",
+    };
+    headerColor = {
+      color: "#f3a930",
+    };
+    subHeaderColor = {
+      color: "#EF7A85",
+    };
   }
   if (props.data.banner === "bluegrey") {
     bannerImage = Bluegrey;
+    photoBorderColor = {
+      borderColor: "black",
+    };
+    headerColor = {
+      color: "#316DC9",
+    };
+    subHeaderColor = {
+      color: "#816495",
+    };
   }
   if (props.data.banner === "bluered") {
     bannerImage = Bluered;
+    photoBorderColor = {
+      borderColor: "black",
+    };
+    headerColor = {
+      color: "#335C67",
+    };
+    subHeaderColor = {
+      color: "#9E2A2B",
+    };
   }
 
   let photoStyle;
@@ -38,8 +73,6 @@ export default function Preview(props) {
     };
   }
 
-  console.log("photoStyle", photoStyle);
-
   return (
     <div>
       <div
@@ -50,20 +83,33 @@ export default function Preview(props) {
         <div
           id="preview__photo"
           className="overlay"
-          style={{ ...photoStyle, ...colorScheme }}
+          style={{ ...photoStyle, ...photoBorderColor }}
         ></div>
       )}
       <div id="preview__content" className="column preview__gap_larger">
-        <PreviewAbout data={props.data} />
+        <PreviewAbout
+          data={props.data}
+          headerColor={headerColor}
+          subHeaderColor={subHeaderColor}
+        />
         <PreviewExperience
           data={props.data}
           experienceModules={props.experienceModules}
+          headerColor={headerColor}
+          subHeaderColor={subHeaderColor}
         />
         <PreviewEducation
           data={props.data}
           educationModules={props.educationModules}
+          headerColor={headerColor}
+          subHeaderColor={subHeaderColor}
         />
-        <PreviewSkills data={props.data} skillsModules={props.skillsModules} />
+        <PreviewSkills
+          data={props.data}
+          skillsModules={props.skillsModules}
+          headerColor={headerColor}
+          subHeaderColor={subHeaderColor}
+        />
       </div>
       <div
         id="preview__banner__footer"

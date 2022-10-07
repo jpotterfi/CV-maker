@@ -8,7 +8,7 @@ export default function Skills(props) {
   const skillsModComponents = skillsModArr.map(function (mod, index) {
     return (
       <ModSkills
-        skillsName={skillsModArr[index]}
+        skillName={skillsModArr[index]}
         moduleID={index}
         changeSkill={props.changeSkill}
       />

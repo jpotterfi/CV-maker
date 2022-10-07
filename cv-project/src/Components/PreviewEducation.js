@@ -4,7 +4,10 @@ export default function PreviewEducation(props) {
   const educationArr = educations.map(function (education) {
     return (
       <div className="row preview__education__mod">
-        <div className="column preview__education__dates">
+        <div
+          className="column preview__education__dates"
+          style={props.subHeaderColor}
+        >
           <div>{education.educationStarting}&nbsp;-</div>
           <br></br>
           <div>{education.educationEnding}</div>
@@ -23,7 +26,11 @@ export default function PreviewEducation(props) {
 
   return (
     <section id="preview__education" className="column preview__gap_larger">
-      <h3 id="preview__education__header" className="preview__header">
+      <h3
+        id="preview__education__header"
+        className="preview__header"
+        style={props.headerColor}
+      >
         Education
       </h3>
       <div className="column preview__gap_largest">{educationArr}</div>

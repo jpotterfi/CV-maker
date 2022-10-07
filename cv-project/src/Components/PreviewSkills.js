@@ -6,7 +6,9 @@ export default function PreviewSkills(props) {
   });
   return (
     <section id="preview__skills" className="column preview__gap_larger">
-      <h3 className="preview__header">Skills</h3>
+      <h3 className="preview__header" style={props.headerColor}>
+        Skills
+      </h3>
       {skillsArr}
     </section>
   );

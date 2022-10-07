@@ -5,7 +5,10 @@ export default function PreviewExperience(props) {
   const experiencesArr = experiences.map(function (experience) {
     return (
       <div className="row preview__experience__mod">
-        <div className="column preview__experience__dates">
+        <div
+          className="column preview__experience__dates"
+          style={props.subHeaderColor}
+        >
           <div>{experience.experienceStarting}&nbsp;-</div>
           <br></br>
           <div>{experience.experienceEnding}</div>
@@ -27,7 +30,11 @@ export default function PreviewExperience(props) {
 
   return (
     <section id="preview__experience" className="column preview__gap_larger">
-      <h3 id="preview__experience_header" className="preview__header">
+      <h3
+        id="preview__experience_header"
+        className="preview__header"
+        style={props.headerColor}
+      >
         Experience
       </h3>
       <div className="column preview__gap_largest">{experiencesArr}</div>
