@@ -79,13 +79,13 @@ export default function Preview(props) {
         id="preview__banner"
         style={{ backgroundImage: `url(${bannerImage})` }}
       ></div>
-      {props.data.usePhoto && (
-        <div
-          id="preview__photo"
-          className="overlay"
-          style={{ ...photoStyle, ...photoBorderColor }}
-        ></div>
-      )}
+
+      <div
+        id="preview__photo"
+        className="overlay"
+        style={{ ...photoStyle, ...photoBorderColor }}
+      ></div>
+
       <div id="preview__content" className="column preview__gap_larger">
         <PreviewAbout
           data={props.data}

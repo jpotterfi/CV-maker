@@ -24,7 +24,7 @@ export default function Photo(props) {
       </h3>
       {props.activeComponentData.photo && (
         <div className="column form-gap">
-          <div className="row">
+          {/* <div className="row">
             <label className="usePhoto" htmlFor="usePhoto">
               Use a photo
             </label>
@@ -35,18 +35,19 @@ export default function Photo(props) {
               checked={props.data.usePhoto}
               onChange={props.handleChange}
             />
-          </div>
-          {props.data.usePhoto ? (
-            <div>
-              <Button variant="contained" component="label">
-                Upload
-                <input
-                  hidden
-                  accept="image/*"
-                  type="file"
-                  onInput={props.changePhoto}
-                />
-              </Button>
+          </div> */}
+          <div id="photo__label-preview-duo" className="form-gap">
+            <Button variant="contained" component="label" id="uploadButton">
+              Upload
+              <input
+                hidden
+                accept="image/*"
+                type="file"
+                onInput={props.changePhoto}
+              />
+            </Button>
+            <div id="photo__label-preview-text-duo">
+              <div className="photo__preview__text">Photo Preview</div>
               <div
                 id="preview"
                 style={{
@@ -60,9 +61,7 @@ export default function Photo(props) {
                 }}
               ></div>
             </div>
-          ) : (
-            <div>No Problem! We won't include a photo on your CV.</div>
-          )}
+          </div>
         </div>
       )}
     </section>

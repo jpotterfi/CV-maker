@@ -35,3 +35,26 @@ h3 {
 .form-gap {
   gap: 26px;
 }
+
+#photo__label-preview-duo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#photo__label-preview-text-duo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 1rem;
+}
+
+.photo__preview__text {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+#uploadButton {
+  align-self: flex-start;
+}

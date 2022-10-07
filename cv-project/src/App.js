@@ -16,9 +16,10 @@ import "./Preview.css";
 import { nanoid } from "nanoid";
 import { hover } from "@testing-library/user-event/dist/hover";
 import Preview from "./Components/Preview";
+import PlaceholderImage from "./Images/Portrait_Placeholder.png";
 
 function App() {
-  const [photoFile, setPhotoFile] = React.useState("");
+  const [photoFile, setPhotoFile] = React.useState(PlaceholderImage);
 
   console.log("photoFile", photoFile);
   const [skillsModules, setSkillsModules] = React.useState([
