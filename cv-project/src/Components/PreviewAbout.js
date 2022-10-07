@@ -66,21 +66,25 @@ export default function PreviewAbout(props) {
           >
             ADDRESS
           </h4>
-          <div id="preview__about__address-output" className="column">
-            <h5 className="preview__about__output">
-              {props.data.addressUSLineOne}
-            </h5>
-            <h5 className="preview__about__output">
-              {props.data.addressUSLineTwo}
-            </h5>
-            <h5 className="preview__about__output">
-              {(props.data.city && props.data.city + ", ") +
-                (props.data.isUSAddress
-                  ? props.data.state
-                  : props.data.country) +
-                " " +
-                props.data.zipcode}
-            </h5>
+          <div className="column">
+            {props.data.addressUSLineOne && (
+              <div id="preview__about__address-output" className="column">
+                <h5 className="preview__about__output">
+                  {props.data.addressUSLineOne}
+                </h5>
+                <h5 className="preview__about__output">
+                  {props.data.addressUSLineTwo}
+                </h5>
+                <h5 className="preview__about__output">
+                  {(props.data.city && props.data.city + ", ") +
+                    (props.data.isUSAddress
+                      ? props.data.state
+                      : props.data.country) +
+                    " " +
+                    props.data.zipcode}
+                </h5>
+              </div>
+            )}
           </div>
         </div>
         <div className="row preview__gap_smaller">

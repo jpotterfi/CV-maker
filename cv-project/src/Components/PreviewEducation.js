@@ -3,23 +3,27 @@ export default function PreviewEducation(props) {
 
   const educationArr = educations.map(function (education) {
     return (
-      <div className="row preview__education__mod">
-        <div
-          className="column preview__education__dates"
-          style={props.subHeaderColor}
-        >
-          <div>{education.educationStarting}&nbsp;-</div>
-          <br></br>
-          <div>{education.educationEnding}</div>
-        </div>
-        <div className="column preview__education__mod__description">
-          <div className="preview__education__name">
-            {education.educationName}
+      <div>
+        {education.educationName && (
+          <div className="row preview__education__mod">
+            <div
+              className="column preview__education__dates"
+              style={props.subHeaderColor}
+            >
+              <div>{education.educationStarting}&nbsp;-</div>
+              <br></br>
+              <div>{education.educationEnding}</div>
+            </div>
+            <div className="column preview__education__mod__description">
+              <div className="preview__education__name">
+                {education.educationName}
+              </div>
+              <div className="preview__education__degree">
+                {education.degreeName}
+              </div>
+            </div>
           </div>
-          <div className="preview__education__degree">
-            {education.degreeName}
-          </div>
-        </div>
+        )}
       </div>
     );
   });
