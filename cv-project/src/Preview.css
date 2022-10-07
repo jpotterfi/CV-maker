@@ -34,24 +34,31 @@
 }
 
 .preview__gap_larger {
-  gap: 26px;
+  gap: 20px;
+}
+
+.preview__gap_largest {
+  gap: 30px;
 }
 
 .preview__header {
   cursor: auto;
 }
 
-.preview__experience__mod {
+.preview__experience__mod,
+.preview__education__mod {
   align-items: flex-start;
   gap: 16px;
 }
 
-.preview__experience__name {
+.preview__experience__name,
+.preview__education__name {
   font-family: "Roboto";
   font-size: 1.125rem;
   font-weight: 700;
 }
-.preview__experience__role {
+.preview__experience__role,
+.preview__education__degree {
   font-family: "Roboto";
   font-size: 1.125rem;
   font-weight: 300;
@@ -64,9 +71,32 @@
   font-weight: 100;
   line-height: 27px;
 }
-.preview__experience__dates {
+.preview__experience__dates,
+.preview__education__dates {
   font-family: "Roboto";
   font-size: 1.125rem;
   font-weight: 900;
   line-height: 21px;
+}
+
+.preview__education__mod__description {
+  align-items: center;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.preview__skills__skill {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+#preview__banner__footer {
+  height: 100px;
+  background-size: cover;
+}
+
+#preview__skills {
+  margin-bottom: 50px;
 }

@@ -4,6 +4,9 @@ import Bluegrey from "../Banners/bluegrey.svg";
 import Bluered from "../Banners/bluered.svg";
 import PreviewAbout from "./PreviewAbout";
 import PreviewExperience from "./PreviewExperience";
+import PreviewEducation from "./PreviewEducation";
+import PreviewSkills from "./PreviewSkills";
+
 export default function Preview(props) {
   let colorScheme;
   let bannerImage;
@@ -50,13 +53,22 @@ export default function Preview(props) {
           style={{ ...photoStyle, ...colorScheme }}
         ></div>
       )}
-      <div id="preview__content">
+      <div id="preview__content" className="column preview__gap_larger">
         <PreviewAbout data={props.data} />
         <PreviewExperience
           data={props.data}
           experienceModules={props.experienceModules}
         />
+        <PreviewEducation
+          data={props.data}
+          educationModules={props.educationModules}
+        />
+        <PreviewSkills data={props.data} skillsModules={props.skillsModules} />
       </div>
+      <div
+        id="preview__banner__footer"
+        style={{ backgroundImage: `url(${bannerImage})` }}
+      ></div>
     </div>
   );
 }

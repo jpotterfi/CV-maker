@@ -26,11 +26,11 @@ export default function PreviewExperience(props) {
   });
 
   return (
-    <section id="preview__experience">
+    <section id="preview__experience" className="column preview__gap_larger">
       <h3 id="preview__experience_header" className="preview__header">
         Experience
       </h3>
-      <div className="column preview__gap_smaller">{experiencesArr}</div>
+      <div className="column preview__gap_largest">{experiencesArr}</div>
     </section>
   );
 }

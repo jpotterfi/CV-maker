@@ -21,18 +21,36 @@ function App() {
   const [photoFile, setPhotoFile] = React.useState("");
 
   console.log("photoFile", photoFile);
-  const [skillsModules, setSkillsModules] = React.useState(["test"]);
+  const [skillsModules, setSkillsModules] = React.useState([
+    "React",
+    "Javascript",
+    "Photohop",
+  ]);
 
   const [educationModules, setEducationModules] = React.useState([
     {
-      educationName: "",
-      degreeName: "",
-      educationStarting: "",
-      educationEnding: "",
+      educationName: "Oberlin",
+      degreeName: "Bachelor's Degree",
+      educationStarting: "2010",
+      educationEnding: "2014",
+    },
+    {
+      educationName: "Odin Project",
+      degreeName: "Full-Stack Development Certification",
+      educationStarting: "2021",
+      educationEnding: "2022",
     },
   ]);
 
   const [experienceModules, setExperienceModules] = React.useState([
+    {
+      experienceName: "Jeremy's Dojo",
+      experienceStarting: "1992",
+      experienceEnding: "1993",
+      experienceRole: "Instructor",
+      experienceDescription:
+        "Led the development of Harvest Farm 2077, an award-winning farm simulation game set in a futuristic Tokyo setting. Headed up a team of five developers and collaborated with many departments to bring the game to life.",
+    },
     {
       experienceName: "Jeremy's Dojo",
       experienceStarting: "1992",
@@ -271,6 +289,8 @@ function App() {
           data={formData}
           photoFile={photoFile}
           experienceModules={experienceModules}
+          educationModules={educationModules}
+          skillsModules={skillsModules}
         />
       )}
     </div>
