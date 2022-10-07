@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   background-color: #ebebeb;
+  gap: 26px;
+  margin-top: 26px;
 }
 
 #experience,

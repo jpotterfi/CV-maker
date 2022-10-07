@@ -91,9 +91,15 @@ function App() {
 
   React.useEffect(
     function () {
-      colorComponentHeadings();
+      //to ensure headers are loaded/in edit mode
+      let personalComponent = document.getElementById("personalComponent");
+      if (personalComponent) {
+        colorComponentHeadings();
+      } else {
+        return;
+      }
     },
-    [activeComponent]
+    [activeComponent, formData.isPreviewing]
   );
 
   function changePhoto(event) {
@@ -233,7 +239,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div id="content">
       <Header
         mode={formData.isPreviewing ? "Preview Mode" : "Edit Mode"}
         handleChange={handleChange}

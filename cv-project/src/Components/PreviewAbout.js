@@ -48,11 +48,14 @@ export default function PreviewAbout(props) {
             D.O.B
           </h4>
           <h5 className="preview__about__output">
-            {props.data.birthdayMonth +
-              "/" +
-              props.data.birthdayDay +
-              "/" +
-              props.data.birthdayYear}
+            {props.data.birthdayDay &&
+              props.data.birthdayMonth &&
+              props.data.birthdayYear &&
+              props.data.birthdayMonth +
+                "/" +
+                props.data.birthdayDay +
+                "/" +
+                props.data.birthdayYear}
           </h5>
         </div>
         <div className="row preview__gap_smaller" id="preview__about__address">
@@ -71,9 +74,10 @@ export default function PreviewAbout(props) {
               {props.data.addressUSLineTwo}
             </h5>
             <h5 className="preview__about__output">
-              {props.data.city +
-                ", " +
-                props.data.state +
+              {(props.data.city && props.data.city + ", ") +
+                (props.data.isUSAddress
+                  ? props.data.state
+                  : props.data.country) +
                 " " +
                 props.data.zipcode}
             </h5>
