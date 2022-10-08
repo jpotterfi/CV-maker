@@ -1,8 +1,19 @@
+import DeleteIcon from "../../Images/delete-icon.svg";
+
 export default function ModEducation(props) {
   return (
-    <form>
-      <div className="column">
-        <label className="weight--slight">School Name</label>
+    <div>
+      <div className="column form">
+        <div className="row between">
+          <label className="weight--slight">School Name</label>
+          <img
+            src={DeleteIcon}
+            type="button"
+            id={props.moduleID}
+            className="delete-icon"
+            onClick={props.deleteEducation}
+          />
+        </div>
         <input
           type="text"
           placeholder="School Name"
@@ -285,6 +296,6 @@ export default function ModEducation(props) {
           </select>
         </div>
       </div>
-    </form>
+    </div>
   );
 }

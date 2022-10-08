@@ -1,3 +1,5 @@
+import DeleteIcon from "../../Images/delete-icon.svg";
+
 export default function ModExperience(props) {
   // function locateInArray() {
   //   const experienceModules = props.experienceModules;
@@ -21,9 +23,18 @@ export default function ModExperience(props) {
     // //       experienceRole: "",
     // //       experienceDescription: "",
     // //     },
-    <form>
+    <div className="form">
       <div className="column">
-        <label className="weight--slight">Employment or Project Name</label>
+        <div className="row between">
+          <label className="weight--slight">Employment or Project Name</label>
+          <img
+            src={DeleteIcon}
+            type="button"
+            id={props.moduleID}
+            className="delete-icon"
+            onClick={props.deleteExperience}
+          />
+        </div>
         <input
           type="text"
           placeholder="Employment or Project Name"
@@ -316,6 +327,6 @@ export default function ModExperience(props) {
           style={{ fontFamily: "Inter" }}
         />
       </div>
-    </form>
+    </div>
   );
 }

@@ -13,6 +13,7 @@ export default function Education(props) {
         educationEnding={educationModArr[index].educationEnding}
         moduleID={index}
         changeEducation={props.changeEducation}
+        deleteEducation={props.deleteEducation}
       />
     );
   });

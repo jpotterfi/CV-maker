@@ -121,6 +121,18 @@ function App() {
 
   console.log(formData.photoFile);
 
+  function deleteSkill(event) {
+    const { id } = event.target;
+
+    setSkillsModules(function (prevSkills) {
+      let newArray = [...prevSkills];
+      console.log("before splice", newArray);
+      newArray.splice(id, 1);
+      console.log("after splice", newArray);
+      return newArray;
+    });
+  }
+
   function changeEducation(event) {
     const { name, value, id } = event.target;
     console.log(name, value, id);
@@ -143,6 +155,24 @@ function App() {
         ...prevExperience[id],
         [name]: value,
       };
+      return newArray;
+    });
+  }
+
+  function deleteEducation(event) {
+    const { id } = event.target;
+    setEducationModules(function (prevEducation) {
+      let newArray = [...prevEducation];
+      newArray.splice(id, 1);
+      return newArray;
+    });
+  }
+
+  function deleteExeperience(event) {
+    const { id } = event.target;
+    setExperienceModules(function (prevExperience) {
+      let newArray = [...prevExperience];
+      newArray.splice(id, 1);
       return newArray;
     });
   }
@@ -261,6 +291,7 @@ function App() {
             experienceModules={experienceModules}
             addExperience={addExperience}
             changeExperience={changeExperience}
+            deleteExperience={deleteExeperience}
           />
           <Skills
             activeComponentData={activeComponent}
@@ -268,6 +299,7 @@ function App() {
             skillsModules={skillsModules}
             changeSkill={changeSkill}
             addSkill={addSkill}
+            deleteSkill={deleteSkill}
           />
           <Education
             activeComponentData={activeComponent}
@@ -275,6 +307,7 @@ function App() {
             educationModules={educationModules}
             changeEducation={changeEducation}
             addEducation={addEducation}
+            deleteEducation={deleteEducation}
           />
           <Graphics
             activeComponentData={activeComponent}

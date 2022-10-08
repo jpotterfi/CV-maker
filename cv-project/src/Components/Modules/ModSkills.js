@@ -1,18 +1,27 @@
+import DeleteIcon from "../../Images/delete-icon.svg";
+
 export default function ModSkills(props) {
   return (
-    <form>
-      <div className="column">
+    <div className="column modskills">
+      <div className="row between">
         <label className="weight--slight">Skill</label>
-        <input
-          type="text"
-          placeholder="Skill Name"
-          name="skillName"
-          className="skill"
-          value={props.skillName}
-          onChange={props.changeSkill}
+        <img
+          src={DeleteIcon}
+          type="button"
           id={props.moduleID}
+          className="delete-icon"
+          onClick={props.deleteSkill}
         />
       </div>
-    </form>
+      <input
+        type="text"
+        placeholder="Skill Name"
+        name="skillName"
+        className="skill"
+        value={props.skillName}
+        onChange={props.changeSkill}
+        id={props.moduleID}
+      />
+    </div>
   );
 }

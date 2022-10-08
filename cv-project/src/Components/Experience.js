@@ -16,6 +16,7 @@ export default function Experience(props) {
         }
         moduleID={index}
         changeExperience={props.changeExperience}
+        deleteExperience={props.deleteExperience}
       />
     );
   });

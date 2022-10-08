@@ -57,4 +57,9 @@ h3 {
 
 #uploadButton {
   align-self: flex-start;
+  background-color: black;
+}
+
+.delete-icon {
+  cursor: pointer;
 }

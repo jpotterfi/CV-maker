@@ -173,14 +173,29 @@ code {
 }
 
 form {
-  line-height: 125%;
+  line-height: 150%;
   font-family: "Inter";
   font-size: 1.125rem;
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 1rem;
+}
+
+.form {
+  line-height: 150%;
+  font-family: "Inter";
+  font-size: 1.125rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .weight--slight {
   font-weight: 500;
+}
+
+.modskills {
+  line-height: 150%;
+  font-size: 1.125rem;
+  font-family: "Inter";
 }

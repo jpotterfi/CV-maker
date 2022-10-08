@@ -11,6 +11,7 @@ export default function Skills(props) {
         skillName={skillsModArr[index]}
         moduleID={index}
         changeSkill={props.changeSkill}
+        deleteSkill={props.deleteSkill}
       />
     );
   });
