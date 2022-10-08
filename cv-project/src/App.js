@@ -17,48 +17,30 @@ import { nanoid } from "nanoid";
 import { hover } from "@testing-library/user-event/dist/hover";
 import Preview from "./Components/Preview";
 import PlaceholderImage from "./Images/Portrait_Placeholder.png";
+import JimmyPhoto from "./Images/jimmy-photo.jpeg";
 
 function App() {
   const [photoFile, setPhotoFile] = React.useState(PlaceholderImage);
 
   console.log("photoFile", photoFile);
-  const [skillsModules, setSkillsModules] = React.useState([
-    "React",
-    "Javascript",
-    "Photohop",
-  ]);
+  const [skillsModules, setSkillsModules] = React.useState([""]);
 
   const [educationModules, setEducationModules] = React.useState([
     {
-      educationName: "Oberlin",
-      degreeName: "Bachelor's Degree",
-      educationStarting: "2010",
-      educationEnding: "2014",
-    },
-    {
-      educationName: "Odin Project",
-      degreeName: "Full-Stack Development Certification",
-      educationStarting: "2021",
-      educationEnding: "2022",
+      educationName: "",
+      degreeName: "",
+      educationStarting: "",
+      educationEnding: "",
     },
   ]);
 
   const [experienceModules, setExperienceModules] = React.useState([
     {
-      experienceName: "Jeremy's Dojo",
-      experienceStarting: "1992",
-      experienceEnding: "1993",
-      experienceRole: "Instructor",
-      experienceDescription:
-        "Led the development of Harvest Farm 2077, an award-winning farm simulation game set in a futuristic Tokyo setting. Headed up a team of five developers and collaborated with many departments to bring the game to life.",
-    },
-    {
-      experienceName: "Jeremy's Dojo",
-      experienceStarting: "1992",
-      experienceEnding: "1993",
-      experienceRole: "Instructor",
-      experienceDescription:
-        "Led the development of Harvest Farm 2077, an award-winning farm simulation game set in a futuristic Tokyo setting. Headed up a team of five developers and collaborated with many departments to bring the game to life.",
+      experienceName: "",
+      experienceStarting: "",
+      experienceEnding: "",
+      experienceRole: "",
+      experienceDescription: "",
     },
   ]);
 
@@ -102,6 +84,80 @@ function App() {
     },
     [activeComponent, formData.isPreviewing]
   );
+
+  function generateExample() {
+    setFormData({
+      firstName: "Jimmy",
+      lastName: "Wales",
+      birthdayDay: "08",
+      birthdayMonth: "07",
+      birthdayYear: "1966",
+      isUSAddress: true,
+      addressUSLineOne: "500 3rd Street",
+      addressUSLineTwo: "Suite 405",
+      city: "San Francisco",
+      country: "",
+      state: "CA",
+      zipcode: "94107",
+      phone: "(945)-473-3422",
+      email: "Jimmy.Wales@gmail.com",
+      banner: "purple",
+      usePhoto: true,
+      isPreviewing: false,
+    });
+    setEducationModules([
+      {
+        educationName: "University of Alabama",
+        degreeName: "Master's in Finance",
+        educationStarting: "1990",
+        educationEnding: "1994",
+      },
+      {
+        educationName: "Auburn University",
+        degreeName: "Bachelor's in Finance",
+        educationStarting: "1986",
+        educationEnding: "1990",
+      },
+    ]);
+    setExperienceModules([
+      {
+        experienceName: "Wikipedia",
+        experienceStarting: "2001",
+        experienceEnding: "2022",
+        experienceRole: "Co-Founder/Board Member",
+        experienceDescription:
+          "Founded a multilingual free online encyclopedia written and maintained by a community of volunteers through open collaboration and a wiki-based editing system. Wikipedia is the largest and most-read reference work in history.",
+      },
+      {
+        experienceName: "NuPedia",
+        experienceStarting: "2000",
+        experienceEnding: "2001",
+        experienceRole: "Editor in Chief",
+        experienceDescription:
+          "Managed thousands of volunteers writing articles for an online encyclopedia in all languages. Initially we found ourselves organizing the work in a very top-down, structured, academic, old-fashioned way. It was no fun for the volunteer writers because we had a lot of academic peer review committees who would criticize articles and give feedback. It was like handing in an essay at grad school, and basically intimidating to participate in.",
+      },
+      {
+        experienceName: "Chicago Options Associates and Bomis",
+        experienceStarting: "1994",
+        experienceEnding: "1996",
+        experienceRole: "Trader",
+        experienceDescription: "Traded futures and options.",
+      },
+    ]);
+    setPhotoFile(JimmyPhoto);
+    setSkillsModules([
+      "AWS",
+      "Nodejs",
+      "Go",
+      "Kafka",
+      "ECS",
+      "Kubernetes",
+      "IaC",
+      "Linux",
+      "Wikimedia APIs",
+      "Mediawiki",
+    ]);
+  }
 
   function changePhoto(event) {
     setPhotoFile(URL.createObjectURL(event.target.files[0]));
@@ -275,6 +331,7 @@ function App() {
         mode={formData.isPreviewing ? "Preview Mode" : "Edit Mode"}
         handleChange={handleChange}
         data={formData}
+        generateExample={generateExample}
       />
       {!formData.isPreviewing ? (
         <div className="App">

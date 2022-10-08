@@ -58,6 +58,7 @@ export default function Photo(props) {
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
+                  border: "8px solid black",
                 }}
               ></div>
             </div>

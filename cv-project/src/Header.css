@@ -96,6 +96,7 @@ input:checked + .slider:before {
   line-height: 125%;
   align-items: center;
   font-size: 0.7rem;
+  cursor: pointer;
 }
 
 #generate-example-icon {

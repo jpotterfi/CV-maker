@@ -5,7 +5,10 @@ import ExportIcon from "../Images/export-icon.svg";
 export default function Header(props) {
   return (
     <header className="header">
-      <div className="column header-generate-group">
+      <div
+        className="column header-generate-group"
+        onClick={props.generateExample}
+      >
         <img id="generate-example-icon" src={GenerateExampleIcon} />
         <h1>
           Generate <br></br> Example CV
