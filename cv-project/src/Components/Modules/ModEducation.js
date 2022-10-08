@@ -2,8 +2,8 @@ import DeleteIcon from "../../Images/delete-icon.svg";
 
 export default function ModEducation(props) {
   return (
-    <div>
-      <div className="column form">
+    <div className="form">
+      <div className="column">
         <div className="row between">
           <label className="weight--slight">School Name</label>
           <img

@@ -1,8 +1,22 @@
+import GenerateExampleIcon from "../Images/generate-example-icon.svg";
+import DownloadIcon from "../Images/download-icon.svg";
+import ExportIcon from "../Images/export-icon.svg";
+
 export default function Header(props) {
   return (
     <header className="header">
-      <h1>CV Maker</h1>
-
+      <div className="column header-generate-group">
+        <img id="generate-example-icon" src={GenerateExampleIcon} />
+        <h1>
+          Generate <br></br> Example CV
+        </h1>
+      </div>
+      <div className="column header-generate-group">
+        <img id="generate-example-icon" src={ExportIcon} />
+        <h1>
+          Export<br></br>to PDF
+        </h1>
+      </div>
       <div className="row between modetoggle">
         <h2 id="header--mode">{props.mode}</h2>
         <div id="header--togglebox">
