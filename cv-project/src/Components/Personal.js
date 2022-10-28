@@ -234,7 +234,8 @@ export default function Personal(props) {
                 onChange={props.handleChange}
               />
               <label
-                htmlFor="isFriendly"
+                htmlFor="isUSAddress"
+                id="isUSAddress__label"
                 className="weight--slight  fs--smaller "
               >
                 US Address

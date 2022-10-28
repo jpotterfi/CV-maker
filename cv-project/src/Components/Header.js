@@ -15,7 +15,7 @@ export default function Header(props) {
         </h1>
       </div>
       <div className="column header-generate-group">
-        <img id="generate-example-icon" src={ExportIcon} />
+        <img id="export-icon" src={ExportIcon} />
         <h1>
           Export<br></br>to PDF
         </h1>

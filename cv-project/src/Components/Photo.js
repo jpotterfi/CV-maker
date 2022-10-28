@@ -52,8 +52,6 @@ export default function Photo(props) {
                 id="preview"
                 style={{
                   backgroundImage: `url(${props.photoFile})`,
-                  height: "300px",
-                  width: "300px",
                   borderRadius: "50%",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",

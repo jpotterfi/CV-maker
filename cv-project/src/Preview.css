@@ -133,3 +133,13 @@
   line-height: 1rem;
   gap: 0.25rem;
 }
+
+#preview {
+  height: 250px;
+  width: 250px;
+}
+
+h5 {
+  font-family: "Roboto";
+  font-weight: 300;
+}

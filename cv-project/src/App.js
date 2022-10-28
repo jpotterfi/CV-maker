@@ -18,6 +18,7 @@ import { hover } from "@testing-library/user-event/dist/hover";
 import Preview from "./Components/Preview";
 import PlaceholderImage from "./Images/Portrait_Placeholder.png";
 import JimmyPhoto from "./Images/jimmy-photo.jpeg";
+import "./queries.css";
 
 function App() {
   const [photoFile, setPhotoFile] = React.useState(PlaceholderImage);
@@ -100,7 +101,7 @@ function App() {
       state: "CA",
       zipcode: "94107",
       phone: "(945)-473-3422",
-      email: "Jimmy.Wales@gmail.com",
+      email: "JWales@gmail.com",
       banner: "purple",
       usePhoto: true,
       isPreviewing: false,

@@ -1,0 +1,208 @@
+@media screen and (min-width: 426px) {
+  /* 428 x 926 iPhone 13 design
+25px margin
+48px font-size parent
+24px font-size child
+15-20px child gap
+26px parent gap
+125% line height?
+No change to flex behavior
+*/
+
+  .headerText {
+    font-size: 2.5rem;
+  }
+
+  form {
+    font-size: 1.25rem;
+  }
+
+  .form {
+    font-size: 1.25rem;
+  }
+
+  .modskills {
+    font-size: 1.25rem;
+  }
+
+  .banner {
+    width: 250px;
+  }
+
+  #bannerText {
+    font-size: 1.25rem;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  textarea {
+    font-size: 1.25rem;
+  }
+
+  #preview {
+    height: 300px;
+    width: 300px;
+  }
+
+  .delete-icon {
+    height: 15px;
+    width: 15px;
+  }
+}
+
+@media screen and (min-width: 742px) {
+  .headerText {
+    font-size: 3rem;
+  }
+
+  form {
+    font-size: 1.5rem;
+  }
+
+  .form {
+    font-size: 1.5rem;
+  }
+
+  .modskills {
+    font-size: 1.5rem;
+  }
+
+  .banner {
+    width: 300px;
+  }
+
+  #bannerText {
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  #generate-example-icon,
+  #export-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  textarea {
+    font-size: 1.5rem;
+  }
+
+  .photo__preview__text {
+    font-size: 3rem;
+  }
+
+  #preview {
+    height: 500px;
+    width: 500px;
+  }
+  .delete-icon {
+    height: 20px;
+    width: 20px;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: 20px;
+    height: 20px;
+  }
+
+  .header {
+    gap: 40px;
+  }
+
+  .modetoggle {
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1278px) {
+  .headerText {
+    font-size: 4.5rem;
+  }
+
+  form {
+    font-size: 2.25rem;
+    max-width: 900px;
+  }
+
+  .form {
+    font-size: 2.25rem;
+    max-width: 900px;
+  }
+
+  .modskills {
+    font-size: 2.25rem;
+    max-width: 900px;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: 25px;
+    height: 25px;
+  }
+
+  #isUSAddress__label {
+    font-size: 1.5rem;
+  }
+
+  .banner {
+    width: 500px;
+    height: 250px;
+  }
+
+  .photo__preview__text {
+    font-size: 4.5rem;
+  }
+
+  #uploadButton {
+    font-size: 1.5rem;
+  }
+
+  #bannerText {
+    font-size: 2.25rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  textarea {
+    font-size: 2.25rem;
+  }
+
+  #preview {
+    height: 600px;
+    width: 600px;
+  }
+
+  .delete-icon {
+    height: 25px;
+    width: 25px;
+  }
+
+  .header {
+    gap: 40px;
+  }
+
+  .modetoggle {
+    gap: 30px;
+  }
+}
