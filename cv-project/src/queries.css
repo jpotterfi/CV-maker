@@ -356,6 +356,11 @@ No change to flex behavior
   .modetoggle {
     gap: 30px;
   }
+
+  .button__add {
+    align-self: flex-start;
+    margin-left: 400px;
+  }
 }
 
 @media screen and (min-width: 2438px) {
@@ -528,8 +533,10 @@ No change to flex behavior
 
   .button__add {
     margin-top: 50px;
-    height: 350px;
-    width: 700px;
-    font-size: 75px;
+    font-size: 3rem;
+    height: 250px;
+    width: 500px;
+    margin-left: 0;
+    align-self: center;
   }
 }
