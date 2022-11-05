@@ -1,6 +1,8 @@
 import GenerateExampleIcon from "../Images/generate-example-icon.svg";
+import GeneratePDF from "./GeneratePDF";
 import DownloadIcon from "../Images/download-icon.svg";
 import ExportIcon from "../Images/export-icon.svg";
+import PDFFile from "./PDFFile";
 
 export default function Header(props) {
   return (
@@ -15,10 +17,12 @@ export default function Header(props) {
         </h1>
       </div>
       <div className="column header-generate-group">
-        <img id="export-icon" src={ExportIcon} />
+        <GeneratePDF />
+        {/* <PDFFile data={props.data} /> */}
+        {/* <img id="export-icon" src={ExportIcon} />
         <h1>
           Export<br></br>to PDF
-        </h1>
+        </h1> */}
       </div>
       <div className="row between modetoggle">
         <h2 id="header--mode">{props.mode}</h2>

@@ -28,44 +28,49 @@ export default function PreviewAbout(props) {
       >
         About
       </h3>
-      <div className="column preview__gap_smaller">
-        <div className="row preview__gap_smaller">
-          <h4
-            className="preview__about__subheading"
-            style={props.subHeaderColor}
+      <div className="wideshift">
+        <div className="column preview__gap_smaller">
+          <div className="row preview__gap_smaller">
+            <h4
+              className="preview__about__subheading"
+              style={props.subHeaderColor}
+            >
+              NAME
+            </h4>
+            <h5 className="preview__about__output">
+              {props.data.firstName + " " + props.data.lastName}
+            </h5>
+          </div>
+          <div className="row preview__gap_smaller">
+            <h4
+              className="preview__about__subheading"
+              style={props.subHeaderColor}
+            >
+              D.O.B
+            </h4>
+            <h5 className="preview__about__output">
+              {props.data.birthdayDay &&
+                props.data.birthdayMonth &&
+                props.data.birthdayYear &&
+                props.data.birthdayMonth +
+                  "/" +
+                  props.data.birthdayDay +
+                  "/" +
+                  props.data.birthdayYear}
+            </h5>
+          </div>
+          <div
+            className="row preview__gap_smaller"
+            id="preview__about__address"
           >
-            NAME
-          </h4>
-          <h5 className="preview__about__output">
-            {props.data.firstName + " " + props.data.lastName}
-          </h5>
-        </div>
-        <div className="row preview__gap_smaller">
-          <h4
-            className="preview__about__subheading"
-            style={props.subHeaderColor}
-          >
-            D.O.B
-          </h4>
-          <h5 className="preview__about__output">
-            {props.data.birthdayDay &&
-              props.data.birthdayMonth &&
-              props.data.birthdayYear &&
-              props.data.birthdayMonth +
-                "/" +
-                props.data.birthdayDay +
-                "/" +
-                props.data.birthdayYear}
-          </h5>
-        </div>
-        <div className="row preview__gap_smaller" id="preview__about__address">
-          <h4
-            className="preview__about__subheading"
-            style={props.subHeaderColor}
-            id="preview__about__address-subheader"
-          >
-            ADDRESS
-          </h4>
+            <h4
+              className="preview__about__subheading"
+              style={props.subHeaderColor}
+              id="preview__about__address-subheader"
+            >
+              ADDRESS
+            </h4>
+          </div>
           <div className="column">
             {props.data.addressUSLineOne && (
               <div id="preview__about__address-output" className="column">
@@ -87,23 +92,25 @@ export default function PreviewAbout(props) {
             )}
           </div>
         </div>
-        <div className="row preview__gap_smaller">
-          <h4
-            className="preview__about__subheading"
-            style={props.subHeaderColor}
-          >
-            EMAIL
-          </h4>
-          <h5 className="preview__about__output">{props.data.email}</h5>
-        </div>
-        <div className="row preview__gap_smaller">
-          <h4
-            className="preview__about__subheading"
-            style={props.subHeaderColor}
-          >
-            PHONE
-          </h4>
-          <h5 className="preview__about__output">{props.data.phone}</h5>
+        <div className="column">
+          <div className="row preview__gap_smaller">
+            <h4
+              className="preview__about__subheading"
+              style={props.subHeaderColor}
+            >
+              EMAIL
+            </h4>
+            <h5 className="preview__about__output">{props.data.email}</h5>
+          </div>
+          <div className="row preview__gap_smaller">
+            <h4
+              className="preview__about__subheading"
+              style={props.subHeaderColor}
+            >
+              PHONE
+            </h4>
+            <h5 className="preview__about__output">{props.data.phone}</h5>
+          </div>
         </div>
       </div>
     </section>

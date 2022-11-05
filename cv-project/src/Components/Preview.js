@@ -74,7 +74,7 @@ export default function Preview(props) {
   }
 
   return (
-    <div>
+    <div id="preview__ref">
       <div
         id="preview__banner"
         style={{ backgroundImage: `url(${bannerImage})` }}

@@ -146,18 +146,7 @@ function App() {
       },
     ]);
     setPhotoFile(JimmyPhoto);
-    setSkillsModules([
-      "AWS",
-      "Nodejs",
-      "Go",
-      "Kafka",
-      "ECS",
-      "Kubernetes",
-      "IaC",
-      "Linux",
-      "Wikimedia APIs",
-      "Mediawiki",
-    ]);
+    setSkillsModules(["AWS", "Nodejs", "Go", "Kafka"]);
   }
 
   function changePhoto(event) {
