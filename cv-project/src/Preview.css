@@ -130,8 +130,8 @@
 
 #preview__about__address-output {
   justify-content: flex-start;
-  line-height: 1rem;
-  gap: 0.25rem;
+  line-height: 1.5;
+  margin-top: -10px;
 }
 
 #preview {
@@ -142,4 +142,10 @@
 h5 {
   font-family: "Roboto";
   font-weight: 300;
+}
+
+.experience__gap,
+.skill__gap,
+.education__gap {
+  gap: 50px;
 }

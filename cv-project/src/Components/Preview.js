@@ -74,7 +74,7 @@ export default function Preview(props) {
   }
 
   return (
-    <div id="preview__ref">
+    <div id="preview__ref" className="column">
       <div
         id="preview__banner"
         style={{ backgroundImage: `url(${bannerImage})` }}
@@ -111,10 +111,10 @@ export default function Preview(props) {
           subHeaderColor={subHeaderColor}
         />
       </div>
-      <div
+      {/* <div
         id="preview__banner__footer"
         style={{ backgroundImage: `url(${bannerImage})` }}
-      ></div>
+      ></div> */}
     </div>
   );
 }

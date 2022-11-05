@@ -43,7 +43,7 @@ export default function Experience(props) {
         <div className="headerText">Experience</div>
       </h3>
       {props.activeComponentData.experience && (
-        <div className="column form-gap">
+        <div className="column form-gap experience__gap">
           {expModComponents}
           <button className="button__add" onClick={props.addExperience}>
             Additional Experience

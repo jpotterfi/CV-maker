@@ -272,6 +272,15 @@ function App() {
     }
   }
 
+  function forcePreview() {
+    setFormData(function (prev) {
+      return {
+        ...prev,
+        isPreviewing: true,
+      };
+    });
+  }
+
   function changeActiveComponent(name, value) {
     setActiveComponent(function (prevComponents) {
       let newObj = prevComponents;
@@ -286,6 +295,7 @@ function App() {
       };
     });
   }
+
   // return {
   //   ...prevComponents,
   //   [name]: !value,
@@ -322,6 +332,7 @@ function App() {
         handleChange={handleChange}
         data={formData}
         generateExample={generateExample}
+        forcePreview={forcePreview}
       />
       {!formData.isPreviewing ? (
         <div className="App">

@@ -92,7 +92,7 @@ export default function PreviewAbout(props) {
             )}
           </div>
         </div>
-        <div className="column">
+        <div className="column wideshift-column">
           <div className="row preview__gap_smaller">
             <h4
               className="preview__about__subheading"

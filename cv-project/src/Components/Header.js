@@ -17,7 +17,7 @@ export default function Header(props) {
         </h1>
       </div>
       <div className="column header-generate-group">
-        <GeneratePDF />
+        <GeneratePDF data={props.data} forcePreview={props.forcePreview} />
         {/* <PDFFile data={props.data} /> */}
         {/* <img id="export-icon" src={ExportIcon} />
         <h1>

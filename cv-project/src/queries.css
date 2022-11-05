@@ -233,12 +233,12 @@ No change to flex behavior
   }
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 1.25;
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   #generate-example-icon,
@@ -281,21 +281,21 @@ No change to flex behavior
 
 @media screen and (min-width: 1278px) {
   .headerText {
-    font-size: 4.5rem;
+    font-size: 3rem;
   }
 
   form {
-    font-size: 2.25rem;
+    font-size: 1.5rem;
     max-width: 900px;
   }
 
   .form {
-    font-size: 2.25rem;
+    font-size: 1.5rem;
     max-width: 900px;
   }
 
   .modskills {
-    font-size: 2.25rem;
+    font-size: 1.5rem;
     max-width: 900px;
   }
 
@@ -310,12 +310,12 @@ No change to flex behavior
   }
 
   .banner {
-    width: 500px;
-    height: 250px;
+    width: 400px;
+    height: 150px;
   }
 
   .photo__preview__text {
-    font-size: 4.5rem;
+    font-size: 1.5rem;
   }
 
   #uploadButton {
@@ -323,25 +323,25 @@ No change to flex behavior
   }
 
   #bannerText {
-    font-size: 2.25rem;
+    font-size: 1.5rem;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.25rem;
     line-height: 1.25;
   }
 
   h2 {
-    font-size: 3rem;
+    font-size: 1.5rem;
   }
 
   textarea {
-    font-size: 2.25rem;
+    font-size: 1.5rem;
   }
 
   #preview {
-    height: 600px;
-    width: 600px;
+    height: 300px;
+    width: 300px;
   }
 
   .delete-icon {
@@ -358,81 +358,9 @@ No change to flex behavior
   }
 }
 
-@media screen and (min-width: 742px) {
-  .headerText {
-    font-size: 3rem;
-  }
-
-  form {
-    font-size: 1.5rem;
-  }
-
-  .form {
-    font-size: 1.5rem;
-  }
-
-  .modskills {
-    font-size: 1.5rem;
-  }
-
-  .banner {
-    width: 300px;
-  }
-
-  #bannerText {
-    font-size: 1.5rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-    line-height: 1.25;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  #generate-example-icon,
-  #export-icon {
-    width: 50px;
-    height: 50px;
-  }
-
-  textarea {
-    font-size: 1.5rem;
-  }
-
-  .photo__preview__text {
-    font-size: 3rem;
-  }
-
-  #preview {
-    height: 500px;
-    width: 500px;
-  }
-  .delete-icon {
-    height: 20px;
-    width: 20px;
-  }
-
-  input[type="checkbox"],
-  input[type="radio"] {
-    width: 20px;
-    height: 20px;
-  }
-
-  .header {
-    gap: 40px;
-  }
-
-  .modetoggle {
-    gap: 20px;
-  }
-}
-
 @media screen and (min-width: 2438px) {
   #preview__banner {
-    height: 863px;
+    height: 500px;
     width: auto;
   }
 
@@ -447,14 +375,14 @@ No change to flex behavior
   }
 
   #preview__content {
-    max-width: 2000px;
+    padding-left: 150px;
   }
 
   #preview__about {
   }
 
   .preview__about__subheading {
-    font-size: 60px;
+    font-size: 50px;
   }
 
   .preview__gap__smaller {
@@ -468,7 +396,140 @@ No change to flex behavior
   .wideshift {
     display: flex;
     flex-direction: row;
-    gap: 200px;
-    padding-left: 100px;
+    justify-content: space-between;
+    margin-right: 400px;
+  }
+
+  .wideshift-column {
+    gap: 50px;
+  }
+  .preview__experience__dates {
+    font-size: 50px;
+    line-height: 0.8;
+  }
+
+  .preview__experience__name {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+  .preview__experience__role {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+  .preview__experience__description {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  .preview__education__dates {
+    font-size: 50px;
+    line-height: 0.8;
+  }
+
+  .preview__education__name {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+  .preview__education__degree {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  .preview__skills__skill {
+    font-size: 40px;
+  }
+
+  #preview__content {
+    gap: 60px;
+  }
+
+  .preview__gap_largest {
+    max-width: 2000px;
+  }
+
+  .headerText {
+    font-size: 7rem;
+  }
+
+  form {
+    font-size: 3.5rem;
+    max-width: 2400px;
+  }
+
+  .form {
+    font-size: 3.5rem;
+    max-width: 2400px;
+  }
+
+  .modskills {
+    font-size: 3.5rem;
+    max-width: 2400px;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: 35px;
+    height: 35px;
+  }
+
+  #isUSAddress__label {
+    font-size: 3.5rem;
+  }
+
+  .banner {
+    width: 1200px;
+    height: 500px;
+  }
+
+  .photo__preview__text {
+    font-size: 8rem;
+  }
+
+  #uploadButton {
+    font-size: 7rem;
+  }
+
+  #bannerText {
+    font-size: 5rem;
+    margin-bottom: 100px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  textarea {
+    font-size: 3.5rem;
+  }
+
+  #preview {
+    height: 800px;
+    width: 800px;
+    margin-top: 100px;
+  }
+
+  .delete-icon {
+    height: 40px;
+    width: 40px;
+  }
+
+  .header {
+    gap: 40px;
+  }
+
+  .modetoggle {
+    gap: 30px;
+  }
+
+  .button__add {
+    margin-top: 50px;
+    height: 350px;
+    width: 700px;
+    font-size: 75px;
   }
 }

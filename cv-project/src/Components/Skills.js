@@ -37,7 +37,7 @@ export default function Skills(props) {
       </h3>
 
       {props.activeComponentData.skills && (
-        <div className="column form-gap">
+        <div className="column form-gap skill__gap">
           {skillsModComponents}
           <button className="button__add" onClick={props.addSkill}>
             Additional Skill

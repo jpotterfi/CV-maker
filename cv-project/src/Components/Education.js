@@ -38,7 +38,7 @@ export default function Education(props) {
       </h3>
 
       {props.activeComponentData.education && (
-        <div className="column form-gap">
+        <div className="column form-gap education__gap">
           {educationModComponents}
           <button className="button__add" onClick={props.addEducation}>
             Additional Education
