@@ -1,9 +1,9 @@
 export default function PreviewEducation(props) {
   const educations = props.educationModules;
 
-  const educationArr = educations.map(function (education) {
+  const educationArr = educations.map(function (education, index) {
     return (
-      <div>
+      <div key={index}>
         {education.educationName && (
           <div className="row preview__education__mod">
             <div

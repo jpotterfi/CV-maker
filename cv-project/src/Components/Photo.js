@@ -2,7 +2,6 @@ import Button from "@mui/material/Button";
 
 export default function Photo(props) {
   let photo = `url(${props.photoFile}`;
-  console.log("photo", photo);
 
   function toggleActive() {
     return props.activeComponentToggle(

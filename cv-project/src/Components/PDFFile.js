@@ -14,21 +14,13 @@ import download from "downloadjs";
 export default function PDFFile(props) {
   let bannerColor;
   if (props.data.banner === "purple") {
-    console.log("purple hi");
     bannerColor = Purple;
-    console.log(bannerColor);
   } else if (props.data.banner === "orange") {
-    console.log("orange hi");
     bannerColor = Orange;
-    console.log(bannerColor);
   } else if (props.data.banner === "bluegrey") {
-    console.log("bluegrey hi");
     bannerColor = Bluegrey;
-    console.log(bannerColor);
   } else if (props.data.banner === "bluered") {
-    console.log("bluered hi");
     bannerColor = Bluered;
-    console.log(bannerColor);
   }
 
   //   if (props.photoFile === "") {
@@ -41,8 +33,6 @@ export default function PDFFile(props) {
   //       backgroundImage: `url(${props.photoFile})`,
   //     };
   //   }
-
-  console.log(Self);
 
   async function createPdf() {
     const jpgUrl = "https://pdf-lib.js.org/assets/cat_riding_unicorn.jpg";

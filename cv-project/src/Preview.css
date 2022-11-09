@@ -149,3 +149,7 @@ h5 {
 .education__gap {
   gap: 50px;
 }
+
+.wideshift-column {
+  gap: 10px;
+}

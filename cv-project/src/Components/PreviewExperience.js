@@ -1,10 +1,9 @@
 export default function PreviewExperience(props) {
   const experiences = props.experienceModules;
-  console.log("experiences", experiences);
 
-  const experiencesArr = experiences.map(function (experience) {
+  const experiencesArr = experiences.map(function (experience, index) {
     return (
-      <div className="row preview__experience__mod">
+      <div key={index} className="row preview__experience__mod">
         <div
           className="column preview__experience__dates"
           style={props.subHeaderColor}

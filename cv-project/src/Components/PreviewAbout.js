@@ -1,24 +1,4 @@
 export default function PreviewAbout(props) {
-  console.log(props.data.firstName);
-  console.log(props.data.lastName);
-
-  //   firstName: "",
-  //   lastName: "",
-  //   birthdayDay: "",
-  //   birthdayMonth: "",
-  //   birthdayYear: "",
-  //   isUSAddress: true,
-  //   addressUSLineOne: "",
-  //   addressUSLineTwo: "",
-  //   city: "",
-  //   country: "",
-  //   state: "AL",
-  //   zipcode: "",
-  //   phone: "",
-  //   email: "",
-  //   banner: "purple",
-  //   usePhoto: true,
-  //   isPreviewing: false,
   return (
     <section id="preview__about" className="column preview__gap_larger">
       <h3

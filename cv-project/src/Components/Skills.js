@@ -2,12 +2,11 @@ import ModSkills from "./Modules/ModSkills";
 
 export default function Skills(props) {
   const skillsModArr = props.skillsModules;
-  console.log("skillsModArr", skillsModArr);
-  console.log(skillsModArr[0]);
 
   const skillsModComponents = skillsModArr.map(function (mod, index) {
     return (
       <ModSkills
+        key={index}
         skillName={skillsModArr[index]}
         moduleID={index}
         changeSkill={props.changeSkill}
@@ -15,7 +14,6 @@ export default function Skills(props) {
       />
     );
   });
-  console.log("skillsModComponents", skillsModComponents);
 
   function toggleActive() {
     return props.activeComponentToggle(

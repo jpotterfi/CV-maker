@@ -2,11 +2,11 @@ import ModExperience from "./Modules/ModExperience";
 
 export default function Experience(props) {
   const expModArr = props.experienceModules;
-  console.log("experience modules", expModArr);
 
   let expModComponents = expModArr.map(function (mod, index) {
     return (
       <ModExperience
+        key={index}
         experienceName={props.experienceModules[index].experienceName}
         experienceStarting={props.experienceModules[index].experienceStarting}
         experienceEnding={props.experienceModules[index].experienceEnding}
@@ -20,8 +20,6 @@ export default function Experience(props) {
       />
     );
   });
-
-  console.log("expModComponents", expModComponents);
 
   function toggleActive() {
     return props.activeComponentToggle(

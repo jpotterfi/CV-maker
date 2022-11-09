@@ -2,11 +2,11 @@ import ModEducation from "./Modules/ModEducation";
 
 export default function Education(props) {
   const educationModArr = props.educationModules;
-  console.log("educationModArr", educationModArr);
 
   const educationModComponents = educationModArr.map(function (mod, index) {
     return (
       <ModEducation
+        key={index}
         educationName={educationModArr[index].educationName}
         degreeName={educationModArr[index].degreeName}
         educationStarting={educationModArr[index].educationStarting}

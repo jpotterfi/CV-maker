@@ -23,7 +23,6 @@ import "./queries.css";
 function App() {
   const [photoFile, setPhotoFile] = React.useState(PlaceholderImage);
 
-  console.log("photoFile", photoFile);
   const [skillsModules, setSkillsModules] = React.useState([""]);
 
   const [educationModules, setEducationModules] = React.useState([
@@ -153,8 +152,6 @@ function App() {
     setPhotoFile(URL.createObjectURL(event.target.files[0]));
   }
 
-  console.log("photoFile", photoFile);
-
   function changeSkill(event) {
     const { name, value, id } = event.target;
 
@@ -165,23 +162,21 @@ function App() {
     });
   }
 
-  console.log(formData.photoFile);
-
   function deleteSkill(event) {
     const { id } = event.target;
 
     setSkillsModules(function (prevSkills) {
       let newArray = [...prevSkills];
-      console.log("before splice", newArray);
+
       newArray.splice(id, 1);
-      console.log("after splice", newArray);
+
       return newArray;
     });
   }
 
   function changeEducation(event) {
     const { name, value, id } = event.target;
-    console.log(name, value, id);
+
     setEducationModules(function (prevEducation) {
       let newArray = [...prevEducation];
       newArray[id] = {
@@ -260,7 +255,6 @@ function App() {
   }
 
   function colorComponentHeadings() {
-    console.log("coloringHeadings");
     for (const property in activeComponent) {
       let component = document.getElementById(property + "Component");
       if (activeComponent[property]) {
@@ -315,7 +309,7 @@ function App() {
       });
     } else {
       const { name, value, type, checked, className, id } = event.target;
-      console.log(name, value, type, checked);
+
       setFormData((prevFormData) => {
         return {
           ...prevFormData,
