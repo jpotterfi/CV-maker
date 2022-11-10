@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/CV-maker/static/css/main.ba871eef.css",
+    "main.js": "/CV-maker/static/js/main.50c47b7b.js",
+    "static/js/703.5e447590.chunk.js": "/CV-maker/static/js/703.5e447590.chunk.js",
+    "static/js/908.252b8228.chunk.js": "/CV-maker/static/js/908.252b8228.chunk.js",
+    "static/js/787.34a20539.chunk.js": "/CV-maker/static/js/787.34a20539.chunk.js",
+    "static/media/bluegrey.svg": "/CV-maker/static/media/bluegrey.f0c2c9f43fd5fe233a475bd7df426c37.svg",
+    "static/media/bluered.svg": "/CV-maker/static/media/bluered.46f9a4cb51e0bdcb79c9fdbbc3c7dece.svg",
+    "static/media/purple.svg": "/CV-maker/static/media/purple.37b64c1f121b71abb3e6b77ecc3822db.svg",
+    "static/media/orange.svg": "/CV-maker/static/media/orange.28da11bbf1751d960bf8811ce73788b7.svg",
+    "static/media/PurplePDF.png": "/CV-maker/static/media/PurplePDF.a152d5b6e6e2b22eacad.png",
+    "static/media/BluegreyPDF.png": "/CV-maker/static/media/BluegreyPDF.bb5511cfe311e4710330.png",
+    "static/media/BlueredPDF.png": "/CV-maker/static/media/BlueredPDF.026a667b2430d6168ca3.png",
+    "static/media/Portrait_Placeholder.png": "/CV-maker/static/media/Portrait_Placeholder.157f088b56f86d22066e.png",
+    "static/media/OrangePDF.png": "/CV-maker/static/media/OrangePDF.19e83c6178d9d5413dcf.png",
+    "static/media/self.jpeg": "/CV-maker/static/media/self.7e19fee12b6c9f7cf4b7.jpeg",
+    "static/media/jimmy-photo.jpeg": "/CV-maker/static/media/jimmy-photo.6d271f3d71247f149ef6.jpeg",
+    "static/media/delete-icon.svg": "/CV-maker/static/media/delete-icon.ccddfa28ea8610eb380c4a4c6c813b86.svg",
+    "index.html": "/CV-maker/index.html",
+    "static/media/generate-example-icon.svg": "/CV-maker/static/media/generate-example-icon.6cb652bb577f337b07330613cfe67a3b.svg",
+    "static/media/export-icon.svg": "/CV-maker/static/media/export-icon.2f048d20dffbac6ea50bbfe237871321.svg",
+    "static/media/download-icon.svg": "/CV-maker/static/media/download-icon.ceb144be1f4d4f957e9ba9ce2d7ba61c.svg",
+    "main.ba871eef.css.map": "/CV-maker/static/css/main.ba871eef.css.map",
+    "main.50c47b7b.js.map": "/CV-maker/static/js/main.50c47b7b.js.map",
+    "703.5e447590.chunk.js.map": "/CV-maker/static/js/703.5e447590.chunk.js.map",
+    "908.252b8228.chunk.js.map": "/CV-maker/static/js/908.252b8228.chunk.js.map",
+    "787.34a20539.chunk.js.map": "/CV-maker/static/js/787.34a20539.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba871eef.css",
+    "static/js/main.50c47b7b.js"
+  ]
+}
