@@ -23,6 +23,8 @@ import "./queries.css";
 function App() {
   const [photoFile, setPhotoFile] = React.useState(PlaceholderImage);
 
+  const [isLoading, setIsLoading] = React.useState(false);
+
   const [skillsModules, setSkillsModules] = React.useState([""]);
 
   const [educationModules, setEducationModules] = React.useState([
@@ -100,8 +102,8 @@ function App() {
       state: "CA",
       zipcode: "94107",
       phone: "(945)-473-3422",
-      email: "JWales@gmail.com",
-      banner: "purple",
+      email: "Jimmy.Wales@gmail.com",
+      banner: "bluered",
       usePhoto: true,
       isPreviewing: false,
     });
@@ -146,6 +148,7 @@ function App() {
     ]);
     setPhotoFile(JimmyPhoto);
     setSkillsModules(["AWS", "Nodejs", "Go", "Kafka"]);
+    forcePreview();
   }
 
   function changePhoto(event) {
@@ -295,6 +298,19 @@ function App() {
   //   [name]: !value,
   // };
 
+  // React.useEffect(
+  //   function () {
+  //     console.log(isLoading);
+  //   },
+  //   [isLoading]
+  // );
+
+  function toggleLoading() {
+    setIsLoading(function (prevIsLoading) {
+      return !prevIsLoading;
+    });
+  }
+
   function handleChange(event) {
     //handles phone entry, but in a bad way
     //maybe create separate handleChange for phone
@@ -327,6 +343,8 @@ function App() {
         data={formData}
         generateExample={generateExample}
         forcePreview={forcePreview}
+        toggleLoading={toggleLoading}
+        isLoading={isLoading}
       />
       {!formData.isPreviewing ? (
         <div className="App">

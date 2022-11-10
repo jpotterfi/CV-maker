@@ -85,12 +85,11 @@
   font-size: 1.125rem;
   font-weight: 900;
   line-height: 21px;
+  margin-bottom: 10px;
 }
 
 .preview__education__mod__description {
-  align-items: center;
   flex-grow: 1;
-  text-align: center;
 }
 
 .preview__skills__skill {
@@ -141,7 +140,7 @@
 
 h5 {
   font-family: "Roboto";
-  font-weight: 300;
+  font-weight: 30 0;
 }
 
 .experience__gap,

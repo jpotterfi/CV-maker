@@ -4,9 +4,11 @@ import ExportIcon from "../Images/export-icon.svg";
 export default function GeneratePDF(props) {
   // <GeneratePDF data={props.data} forcePreview={props.forcePreview} />
   async function htmlToPDF() {
-    if (props.data.isPreviewing === false) {
-      props.forcePreview();
-    }
+    // if (props.data.isPreviewing === false) {
+    //   props.forcePreview();
+    // }
+    await props.forcePreview();
+    await props.toggleLoading();
     html2canvas(document.querySelector("#preview__ref"), {
       windowWidth: 2480,
       windowHeight: 3508,
@@ -18,6 +20,7 @@ export default function GeneratePDF(props) {
       const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
       doc.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
       doc.save("resume.pdf");
+      props.toggleLoading();
     });
   }
   return (
